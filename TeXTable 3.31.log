@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  30 MAR 2023 23:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  31 MAR 2023 09:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./MainTable 3.30.tex"
-(MainTable 3.30.tex
+**"./TeXTable 3.31.tex"
+(TeXTable 3.31.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-07>
 (C:\Users\evan1\Documents\Github\MiKTeX\MiKTeX\tex/latex/standalone\standalone.
@@ -560,23 +560,23 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
 \l__pdf_internal_box=\box85
 )
-No file "MainTable 3.30".aux.
-\openout1 = `"MainTable 3.30.aux"'.
+No file "TeXTable 3.31".aux.
+\openout1 = `"TeXTable 3.31.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 (C:\Users\evan1\Documents\Github\MiKTeX\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
@@ -603,77 +603,87 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
 
  (C:\Users\evan1\Documents\Github\MiKTeX\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
 
  (C:\Users\evan1\Documents\Github\MiKTeX\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (2.86841pt too wide) in paragraph at lines 97--97
+Overfull \hbox (2.86841pt too wide) in paragraph at lines 99--99
  \OT1/cmss/m/n/10 Molybdenum 
  []
 
 
-Overfull \hbox (10.17397pt too wide) in paragraph at lines 218--218
+Overfull \hbox (10.17397pt too wide) in paragraph at lines 220--220
  \OT1/cmss/m/n/10 Praseodymium 
  []
 
 
-Overfull \hbox (3.11838pt too wide) in paragraph at lines 235--235
+Overfull \hbox (3.11838pt too wide) in paragraph at lines 237--237
  \OT1/cmss/m/n/10 Protactinium 
  []
 
 
-Overfull \hbox (3.7017pt too wide) in paragraph at lines 245--245
+Overfull \hbox (3.7017pt too wide) in paragraph at lines 247--247
  \OT1/cmss/m/n/10 Mendelevium 
  []
 
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 284.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 286.
 
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 285.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 287.
 
 Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--332
+[][] 
+ []
+
+
+Overfull \hbox (167.03644pt too wide) in paragraph at lines 309--332
+[]  
+ []
+
 [1
 
 {C:/Users/evan1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(MainTable 3.30.aux) ) 
+(TeXTable 3.31.aux) ) 
 Here is how much of TeX's memory you used:
- 16841 strings out of 476339
- 353748 string characters out of 5787650
- 2036340 words of memory out of 5000000
- 36980 multiletter control sequences out of 15000+600000
+ 16860 strings out of 476339
+ 354126 string characters out of 5787650
+ 2062340 words of memory out of 5000000
+ 36999 multiletter control sequences out of 15000+600000
  524184 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,12n,118p,852b,800s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmex10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/evan1/Documents/Github/MiKT
-eX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/evan1/Documents/Gi
-thub/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/evan1/Doc
-uments/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
-evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C
-:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
-7.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmss10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmss12.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmss17.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/evan1/Documents/Github/M
-iKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/evan1/Docume
-nts/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/e
-van1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><
-C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmsy5.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmsy7.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts
-/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/evan1/Documents/Github/MiKT
-eX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "MainTable 3.30.pdf" (1 page, 228061 bytes).
+ 117i,21n,118p,851b,822s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmex10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/evan1/Documents/Github/MiKTe
+X/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/evan1/Documents/Git
+hub/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/evan1/Docu
+ments/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/e
+van1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:
+/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7
+.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmss10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmss12.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmss17.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/evan1/Documents/Github/Mi
+KTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/evan1/Documen
+ts/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/ev
+an1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C
+:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmsy5.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/
+type1/public/amsfonts/symbols/msam10.pfb><C:/Users/evan1/Documents/Github/MiKTe
+X/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "TeXTable 3.31.pdf" (1 page, 230490 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

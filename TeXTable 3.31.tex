@@ -1,96 +1,98 @@
+%Adapted by Evan Lim. Many thanks to Ivan Griffin for the original work, and to Janosh Riebessel, whose remix I have modified. Also, credits to David Carlisle for the \specialcell command.
 \documentclass[tikz,border=10mm]{standalone}
 \usetikzlibrary{shapes,calc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
-%Adapted by Evan Lim. Many thanks to Ivan Griffin for the original work, and to Janosh Riebessel, whose remix I have modified.
-\begin{document}
+\newcommand{\specialcell}[2][c]{
+	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 \newcommand{\ElemLabels}[5]{
-  \begin{minipage}{1.8cm}
-    \centering
-    	  {\textbf{#1}\hfill #4}%
-	  \vspace{2mm}
-      \linebreak
-      {\textbf{#3}}%
-      \linebreak {{#5}} \linebreak
-      {{#2}}
+	\begin{minipage}{1.8cm}
+	\centering
+		{\textbf{#1}\hfill #4}%
+		\vspace{2mm}
+		\linebreak
+		{\textbf{#3}}%
+		\linebreak {{#5}} \linebreak
+		{{#2}}
   \end{minipage}
 }
 \newcommand{\ElemLabelNEN}[4]{
   \begin{minipage}{1.8cm}
-    \centering
-    	  {\textbf{#1}\hfill #4}%
-	  \vspace{2mm}
-      \linebreak
-      \textbf{#3}%
-      \linebreak {#2}
+	\centering
+		{\textbf{#1}\hfill #4}%
+		\vspace{2mm}
+		\linebreak
+		\textbf{#3}%
+		\linebreak {#2}
   \end{minipage}
 }
 \newcommand{\NaturalElem}[5]{\ElemLabels{#1}{#2}{\LARGE {#3}}{#4}{#5}}
 \newcommand{\SyntheticElem}[4]{\ElemLabelNEN{#1}{#2}{\color{gray}{\LARGE {#3}}}{#4}}
 \newcommand{\SyntheticElemEN}[5]{\ElemLabels{#1}{#2}{\color{gray}{\LARGE {#3}}}{#4}{#5}}
-
+\newcommand{\up}[1]{\textsuperscript{#1}}
+\begin{document}
 \begin{tikzpicture}[font=\sffamily]
 
   % Fill Color Styles
-  \tikzstyle{ElementFill} = [fill=yellow!15]
-  \tikzstyle{AlkaliMetalFill} = [fill=blue!55]
-  \tikzstyle{AlkalineEarthMetalFill} = [fill=blue!40]
-  \tikzstyle{MetalFill} = [fill=blue!25]
-  \tikzstyle{MetalloidFill} = [fill=orange!40]
-  \tikzstyle{NonmetalFill} = [fill=teal!40]
-  \tikzstyle{HalogenFill} = [fill=yellow!40]
-  \tikzstyle{NobleGasFill} = [fill=green!55]
-  \tikzstyle{LanthanideActinideFill} = [fill=red!40]
+	\tikzstyle{ElementFill} = [fill=yellow!15]
+	\tikzstyle{AlkaliMetalFill} = [fill=blue!55]
+	\tikzstyle{AlkalineEarthMetalFill} = [fill=blue!40]
+	\tikzstyle{MetalFill} = [fill=blue!25]
+	\tikzstyle{MetalloidFill} = [fill=orange!40]
+	\tikzstyle{NonmetalFill} = [fill=teal!40]
+	\tikzstyle{HalogenFill} = [fill=yellow!40]
+	\tikzstyle{NobleGasFill} = [fill=green!55]
+	\tikzstyle{LanthanideActinideFill} = [fill=red!40]
 
   % Element Styles
-  \tikzstyle{Element} = [ElementFill,
-    minimum width=2.3cm, minimum height=2.3cm, node distance=2.4cm]
-  \tikzstyle{AlkaliMetal} = [Element, AlkaliMetalFill]
-  \tikzstyle{AlkalineEarthMetal} = [Element, AlkalineEarthMetalFill]
-  \tikzstyle{Metal} = [Element, MetalFill]
-  \tikzstyle{Metalloid} = [Element, MetalloidFill]
-  \tikzstyle{Nonmetal} = [Element, NonmetalFill]
-  \tikzstyle{Halogen} = [Element, HalogenFill]
-  \tikzstyle{NobleGas} = [Element, NobleGasFill]
-  \tikzstyle{LanthanideActinide} = [Element, LanthanideActinideFill]
-  \tikzstyle{PeriodLabel} = [font={\sffamily\LARGE}, node distance=1.5cm]
-  \tikzstyle{GroupLabel} = [font={\sffamily\large}, minimum width=2.75cm, node distance=1.5cm]
+	\tikzstyle{Element} = [ElementFill,
+		minimum width=2.3cm, minimum height=2.3cm, node distance=2.4cm]
+	\tikzstyle{AlkaliMetal} = [Element, AlkaliMetalFill]
+	\tikzstyle{AlkalineEarthMetal} = [Element, AlkalineEarthMetalFill]
+	\tikzstyle{Metal} = [Element, MetalFill]
+	\tikzstyle{Metalloid} = [Element, MetalloidFill]
+	\tikzstyle{Nonmetal} = [Element, NonmetalFill]
+	\tikzstyle{Halogen} = [Element, HalogenFill]
+	\tikzstyle{NobleGas} = [Element, NobleGasFill]
+	\tikzstyle{LanthanideActinide} = [Element, LanthanideActinideFill]
+	\tikzstyle{PeriodLabel} = [font={\sffamily\LARGE}, node distance=1.5cm]
+	\tikzstyle{GroupLabel} = [font={\sffamily\large}, minimum width=2.75cm, node distance=1.5cm]
 
   % Group 1 - IA
-  \node[Element] (H) {\NaturalElem{1}{1.01}{H\textsubscript{2}}{2.20}{Hydrogen}};
-  \node[below of=H, AlkaliMetal] (Li) {\NaturalElem{3}{6.94}{Li}{0.98}{Lithium}};
-  \node[below of=Li, AlkaliMetal] (Na) {\NaturalElem{11}{22.99}{Na}{0.93}{Sodium}};
-  \node[below of=Na, AlkaliMetal] (K) {\NaturalElem{19}{39.10}{K}{0.82}{Potassium}};
-  \node[below of=K, AlkaliMetal] (Rb) {\NaturalElem{37}{85.47}{Rb}{0.82}{Rubidium}};
-  \node[below of=Rb, AlkaliMetal] (Cs) {\NaturalElem{55}{132.91}{Cs}{0.79}{Caesium}};
-  \node[below of=Cs, AlkaliMetal] (Fr) {\NaturalElem{87}{(223)}{Fr}{0.7}{Francium}};
+	\node[Element] (H) {\NaturalElem{1}{1.01}{H\textsubscript{2}}{2.20}{Hydrogen}};
+	\node[below of=H, AlkaliMetal] (Li) {\NaturalElem{3}{6.94}{Li}{0.98}{Lithium}};
+	\node[below of=Li, AlkaliMetal] (Na) {\NaturalElem{11}{22.99}{Na}{0.93}{Sodium}};
+	\node[below of=Na, AlkaliMetal] (K) {\NaturalElem{19}{39.10}{K}{0.82}{Potassium}};
+	\node[below of=K, AlkaliMetal] (Rb) {\NaturalElem{37}{85.47}{Rb}{0.82}{Rubidium}};
+	\node[below of=Rb, AlkaliMetal] (Cs) {\NaturalElem{55}{132.91}{Cs}{0.79}{Caesium}};
+	\node[below of=Cs, AlkaliMetal] (Fr) {\NaturalElem{87}{(223)}{Fr}{0.7}{Francium}};
 
-  % Group 2 - IIA
-  \node[right of=Li, AlkalineEarthMetal] (Be) {\NaturalElem{4}{9.01}{Be}{1.57}{Beryllium}};
-  \node[below of=Be, AlkalineEarthMetal] (Mg) {\NaturalElem{12}{24.31}{Mg}{1.31}{Magnesium}};
-  \node[below of=Mg, AlkalineEarthMetal] (Ca) {\NaturalElem{20}{40.08}{Ca}{1.00}{Calcium}};
-  \node[below of=Ca, AlkalineEarthMetal] (Sr) {\NaturalElem{38}{87.62}{Sr}{0.95}{Strontium}};
-  \node[below of=Sr, AlkalineEarthMetal] (Ba) {\NaturalElem{56}{137.33}{Ba}{0.89}{Barium}};
-  \node[below of=Ba, AlkalineEarthMetal] (Ra) {\NaturalElem{88}{(226)}{Ra}{0.9}{Radium}};
+	% Group 2 - IIA
+	\node[right of=Li, AlkalineEarthMetal] (Be) {\NaturalElem{4}{9.01}{Be}{1.57}{Beryllium}};
+	\node[below of=Be, AlkalineEarthMetal] (Mg) {\NaturalElem{12}{24.31}{Mg}{1.31}{Magnesium}};
+	\node[below of=Mg, AlkalineEarthMetal] (Ca) {\NaturalElem{20}{40.08}{Ca}{1.00}{Calcium}};
+	\node[below of=Ca, AlkalineEarthMetal] (Sr) {\NaturalElem{38}{87.62}{Sr}{0.95}{Strontium}};
+	\node[below of=Sr, AlkalineEarthMetal] (Ba) {\NaturalElem{56}{137.33}{Ba}{0.89}{Barium}};
+	\node[below of=Ba, AlkalineEarthMetal] (Ra) {\NaturalElem{88}{(226)}{Ra}{0.9}{Radium}};
 
   % Group 3 - IIIB
-  \node[right of=Ca, Metal] (Sc) {\NaturalElem{21}{44.96}{Sc}{1.36}{Scandium}};
-  \node[below of=Sc, Metal] (Y) {\NaturalElem{39}{88.91}{Y}{1.22}{Yttrium}};
-  \node[below of=Y, LanthanideActinide] (LaLu) {\NaturalElem{57-71}{}{La-Lu}{$\phantom{2}$}{Lanthanide}};
-  \node[below of=LaLu, LanthanideActinide] (AcLr) {\NaturalElem{89-103}{}{Ac-Lr}{$\phantom{2}$}{Actinide}};
+	\node[right of=Ca, Metal] (Sc) {\NaturalElem{21}{44.96}{Sc}{1.36}{Scandium}};
+	\node[below of=Sc, Metal] (Y) {\NaturalElem{39}{88.91}{Y}{1.22}{Yttrium}};
+	\node[below of=Y, LanthanideActinide] (LaLu) {\NaturalElem{57-71}{}{La-Lu}{$\phantom{2}$}{Lanthanide}};
+	\node[below of=LaLu, LanthanideActinide] (AcLr) {\NaturalElem{89-103}{}{Ac-Lr}{$\phantom{2}$}{Actinide}};
 
   % Group 4 - IVB
-  \node[right of=Sc, Metal] (Ti) {\NaturalElem{22}{47.87}{Ti}{1.54}{Titanium}};
-  \node[below of=Ti, Metal] (Zr) {\NaturalElem{40}{91.22}{Zr}{1.33}{Zirconium}};
-  \node[below of=Zr, Metal] (Hf) {\NaturalElem{72}{178.49}{Hf}{1.3}{Hafnium}};
-  \node[below of=Hf, Metal] (Rf) {\SyntheticElem{104}{(267)}{Rf}{Rutherfordium}};
+	\node[right of=Sc, Metal] (Ti) {\NaturalElem{22}{47.87}{Ti}{1.54}{Titanium}};
+	\node[below of=Ti, Metal] (Zr) {\NaturalElem{40}{91.22}{Zr}{1.33}{Zirconium}};
+	\node[below of=Zr, Metal] (Hf) {\NaturalElem{72}{178.49}{Hf}{1.3}{Hafnium}};
+	\node[below of=Hf, Metal] (Rf) {\SyntheticElem{104}{(267)}{Rf}{Rutherfordium}};
 
   % Group 5 - VB
-  \node[right of=Ti, Metal] (V) {\NaturalElem{23}{50.94}{V}{1.63}{Vanadium}};
-  \node[below of=V, Metal] (Nb) {\NaturalElem{41}{92.91}{Nb$^{\bigstar}$}{1.6}{Niobium}};
-  \node[below of=Nb, Metal] (Ta) {\NaturalElem{73}{180.95}{Ta}{1.5}{Tantalum}};
-  \node[below of=Ta, Metal] (Db) {\SyntheticElem{105}{(268)}{Db}{Dubnium}};
+	\node[right of=Ti, Metal] (V) {\NaturalElem{23}{50.94}{V}{1.63}{Vanadium}};
+	\node[below of=V, Metal] (Nb) {\NaturalElem{41}{92.91}{Nb$^{\bigstar}$}{1.6}{Niobium}};
+	\node[below of=Nb, Metal] (Ta) {\NaturalElem{73}{180.95}{Ta}{1.5}{Tantalum}};
+	\node[below of=Ta, Metal] (Db) {\SyntheticElem{105}{(268)}{Db}{Dubnium}};
 
   % Group 6 - VIB
   \node[right of=V, Metal] (Cr) {\NaturalElem{24}{52.00}{Cr$^{\bigstar}$}{1.66}{Chromium}};
@@ -274,7 +276,7 @@
 		%(AcLr.south west) -- (Ac.south west);
 
 	% Diagram Title (Change to (0,0) for Poster)
-	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,5)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements};
+	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,6.2)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements};
 
 %%FORMULAS%%
 	%Periodic Trends
@@ -284,12 +286,12 @@
 	\node at ($(Fr.south)-(-0.2,1.8)-(0.55,1.15)$) (Gas) [text width = 2cm, align=left] {\textit{Gas}\\ CO\\ CO\textsubscript{2}\\ CH\textsubscript{4}\\ C\textsubscript{2}H\textsubscript{6}\\ C\textsubscript{3}H\textsubscript{8}\\ C\textsubscript{4}H\textsubscript{10} \\ NO NO\textsubscript{2}\\ N\textsubscript{2}O NH\textsubscript{3}\\ SO\textsubscript{3} SO\textsubscript{2}\\ H\textsubscript{2}S HCl};
 	\node at ($(Fr.south)-(-0.2,1.8)$) (SuperSeven) [draw] [text width=1cm,align=left] {\textit{Super\textsuperscript{7}}\\ HI\\ HBr\\ HCl\\ HNO\textsubscript{3}\\ H\textsubscript{2}SO\textsubscript{4}\\ HClO\textsubscript{3}\\ HClO\textsubscript{4}};
 	%Constants
-;	\node at ($(Be.north)+(1,5.3)$) (Constants) [draw] [text width = 9.4cm, align=left] {$R_{\text{gas-law}}=0.0821\dfrac{\text{L}\cdot\text{atm}}{\text{mol}\cdot\text{K}}=62.4\dfrac{\text{L}\cdot\text{mmHg}}{\text{mol}\cdot{K}}=8.314\dfrac{\text{L}\cdot\text{kPa}\lor\text{J}}{\text{mol}\cdot\text{K}}$\\ \vspace{0.3cm}
+;	\node at ($(Be.north)+(1,5.8)$) (Constants) [draw] [text width = 9.4cm, align=left] {$R_{\text{gas-law}}=0.0821\dfrac{\text{L}\cdot\text{atm}}{\text{mol}\cdot\text{K}}=62.4\dfrac{\text{L}\cdot\text{mmHg}}{\text{mol}\cdot{K}}=8.314\dfrac{\text{L}\cdot\text{kPa}\lor\text{J}}{\text{mol}\cdot\text{K}}$\\ \vspace{0.3cm}
 $\dfrac{453.6\text{ g}}{1\text{ lb}}=\dfrac{2.54\text{ cm}}{1\text{ in}}=\dfrac{0.946\text{ L}}{1\text{ qt}}=\dfrac{6.022\times10^{23}\text{ units}}{\text{mol}}=\dfrac{22.4\text{ L}}{\text{mol}}$\\ \vspace{0.3cm}$\dfrac{1\text{ g}_{\text{water}}}{1\text{ mL}_{\text{water}}}=\dfrac{P_{\text{sea}}}{101325\text{ Pa}}=\dfrac{1\text{ atm}}{760\text{ mmHg}}=\dfrac{1\text{ atm}}{14.7\text{ psi}}$\\ \vspace{0.3cm} $^{\circ}\text{C}=\frac{5}{9}(^{\circ}\text{F}-32)$ and $^{\circ}\text{F}=\frac95 ^{\circ}\text{C}+32$\\ \vspace{0.3cm} $h=6.626\times10^{-34}\text{Js}\lor\text{kgm}^2\text{s}^{-1}$ and $c=3.00\times10^8\text{ ms}^{-1}$};
 	%Gas
 	\node at ($(Constants.east)+(3.4,-1.1)$) (Gasses) [draw] [text width = 6.5cm, align=left] {$PV=nRT$ and $\left[P+\frac{an^2}{V^2}\right][V-nb]=nRT$\\ $PV\propto1$ and $VT\propto 1$ (Boyle and Charle).\\$M=\dfrac{\text{moles solute}}{\text{L solution}}$ and $m=\dfrac{\text{moles solute}}{\text{kg solvent}}$\\ $X_{\text{mol fraction}}=\frac{\text{mol component}}{\text{mol total}}$.};
 	%Thermodynamics
-	\node at ($(Be.north)+(2,1.7)$) (Thermo) [draw] [text width = 6cm, align = left] {$\triangle H_{\text{vap}}=40.67\text{kJ mol}^{-1}$\\$\triangle H_{\text{fus}}=6.01\text{kJ mol}^{-1}$\\  $C_{\text{ice}}=2.11\text{J (gK)}^{-1}$\\ $C_{\text{water}}=4.184\text{J (gK)}^{-1}$\\ $C_{\text{steam}}=1.865\text{J (gK)}^{-1}$};
+	\node at ($(Be.north)+(2,2)$) (Thermo) [draw] [text width = 6cm, align = left] {$\triangle H_{\text{vap}}=40.67\text{kJ mol}^{-1}$\\$\triangle H_{\text{fus}}=6.01\text{kJ mol}^{-1}$\\  $C_{\text{ice}}=2.11\text{J (gK)}^{-1}$\\ $C_{\text{water}}=4.184\text{J (gK)}^{-1}$\\ $C_{\text{steam}}=1.865\text{J (gK)}^{-1}$};
 	\node at ($(Thermo.east)+(-1.4,0)$) (ThermoTwo) [text width = 2.3cm, align = left] {$\dfrac{r_1}{r_2}=\sqrt{\dfrac{M_2}{M_1}}$\\ $v_{\text{rms}}=\sqrt{\dfrac{3RT}{M}}$};
 	%'Quantum'
 	\node at ($(Be.east)+(2.7,0.5)$) (Quantum) [draw] [text width = 5cm, align = left] {$E_{\text{photon}}=hf=\frac{hc}{\lambda}$ and $\lambda=\frac{h}{mv}$\\ $E_n=-\frac{R_H}{n^2}$\\ $R_{H_{\text{Rydberg}}}=2.18\times 10^{-18}\text{ J}$\\ $\triangle E=R_H\left(\frac{1}{n_i^2}-\frac{1}{n_f^2}\right)$};
@@ -300,9 +302,36 @@ $\dfrac{453.6\text{ g}}{1\text{ lb}}=\dfrac{2.54\text{ cm}}{1\text{ in}}=\dfrac{
 	%expansion
 	\node at ($(Titles.north)+(0,0.1)$) (Expand) {\large{1s\textsuperscript{2}2s\textsuperscript{2}2p\textsuperscript{6}3s\textsuperscript{2}3p\textsuperscript{6}4s\textsuperscript{2}3d\textsuperscript{10}4p\textsuperscript{6}5s\textsuperscript{2}4d\textsuperscript{10}5p\textsuperscript{6}6s\textsuperscript{2}4f\textsuperscript{14}5d\textsuperscript{10}6p\textsuperscript{6}7s\textsuperscript{2}5f\textsuperscript{14}6d\textsuperscript{10}7p\textsuperscript{6}}};
 	%Kinematics
-	\node at ($(Gasses.east)+(1.4,-0.2)$) (Kinematics) [draw] [text width = 2.5cm, align = left] {$k=Ae^{-\frac{E_a}{RT}}$\\$[A]_t=[A]_0-kt$\\ $[A]_t=[A]_0e^{-kt}$\\$[A]_t=\frac{1}{kt+\frac{1}{[A]_0}}$};
+	\node at ($(Gasses.east)+(1.37,-0.2)$) (Kinematics) [draw] [text width = 2.5cm, align = left] {$k=Ae^{-\frac{E_a}{RT}}$\\$[A]_t=[A]_0-kt$\\ $[A]_t=[A]_0e^{-kt}$\\$[A]_t=\frac{1}{kt+\frac{1}{[A]_0}}$};
 	%entropy
-	\node at ($(Mn.north)+(0,2)$) (Entropy) [draw] [text width = 8cm, align = left] {$\triangle E = q+w=q-P\triangle V$ and $\triangle H=\triangle E+P\triangle V$\\ Isotherm, $\triangle S = \frac{q_{\text{if-reverse}}}{T}$, or $S=k\ln W$ (micro-state)\\ \vspace{1mm} $k=1.38\times10^{-23}\text{ JK}^{-1}$\\ \vspace{1mm} $\triangle S = k\ln\left(\frac{W_{\text{final}}}{W_{\text{initial}}}\right)$ and $\triangle S_{\text{surr.}}=-\frac{\triangle H^{\circ}}{T}$\\ \vspace{1mm} $-T\triangle S_{\text{universe}}=\triangle H_{\text{system}}-T\triangle S_{\text{system}}$\\ \vspace{1mm} $\triangle G:= -T\triangle S_{\text{universe}}=\triangle H^{\circ}-T\triangle S^{\circ}$};
+	\node at ($(Mn.north)+(-1,3)$) (Entropy) [draw] [text width = 8cm, align = left] {$\triangle E = q+w=q-P\triangle V$ and $\triangle H=\triangle E+P\triangle V$\\ Isotherm, $\triangle S = \frac{q_{\text{if-reverse}}}{T}$, or $S=k\ln W$ (micro-state)\\ \vspace{1mm} $k=1.38\times10^{-23}\text{ JK}^{-1}$\\ \vspace{1mm} $\triangle S = k\ln\left(\frac{W_{\text{final}}}{W_{\text{initial}}}\right)$ and $\triangle S_{\text{surr.}}=-\frac{\triangle H^{\circ}}{T}$\\ \vspace{1mm} $-T\triangle S_{\text{universe}}=\triangle H_{\text{system}}-T\triangle S_{\text{system}}$\\ \vspace{1mm} $\triangle G:= -T\triangle S_{\text{universe}}=\triangle H^{\circ}-T\triangle S^{\circ}$};
+	%solubility chart
+	\node at ($(Ni.west)+(-0.9,7.2)$) (SolubilityChart) [text width = 3.3cm, align = left] {
+		\setlength\tabcolsep{1.5pt}
+		\begin{tabular}{|c|c|c|}
+			\hline Ion&Soluble with&Precipitates with\\ 
+			\hline $\text{NO}_3^{-}$ Nitrate&Most cations&No common cations\\
+			\hline $\text{ClO}_4^{-}$&Most cations&No common cations\\
+			\hline $\text{ClO}_3^-$&Most cations&No common cations\\
+			\hline $\text{C}_2\text{H}_3\text{O}_2^-$&Most cations&$\text{Ag}^{+},\text{Hg}_2^{2+}$\\
+			\hline $\text{F}^-$&Most cations&$\text{Cr}^{3+}$\\
+			\hline $\text{Cl}^-$&Most cations&$\text{(Ag, Tl)}^+,\text{Pb}^{2+,4+},\text{Hg}_2^{2+}$\\
+			\hline $\text{Br}^-$&Most cations&$\text{(Ag, Tl)}^+,\text{Pb}^{2+,4+},\text{Hg}_2^{2+}$\\
+			\hline $\text{I}^-$&Most cations&$\text{(Ag, Tl)}^+,\text{Pb}^{2+,4+},\text{Hg}_2^{2+}$\\
+			\hline $\text{SO}_4^{2-}$&Most cations&\specialcell[t]{$\text{Ag}^+,\text{Ba}^{2+},\text{Sr}^{2+},$\\$\text{Pb}^{2+,4+},\text{Ca}^{2+},\text{Hg}_2^{2+}$}\\
+			\hline $\text{CrO}_4^{2-}$&Most cations&\specialcell[t]{$\text{Ba}^{2+},\text{Sr}^{2+},\text{Pb}^{2+,4+},$\\ $\text{Ca}^{2+},\text{Hg}_2^{2+}$}\\
+			\hline $\text{S}^{2-}$& \specialcell[t]{$\text{Na}^+,\text{K}^+,\text{NH}_4^+,$\\$\text{Li}^+,\text{Sr}^{2+}$}&Most other cations\\
+			\hline $\text{OH}^-$&\specialcell[t]{$\text{Na}^+,\text{K}^+,\text{NH}_4^+,\text{Li}^+,$\\$\text{Sr}^{2+},\text{Ba}^{2+},\text{Ca}^{2+}$}&Most other cations\\ 
+			\hline $\text{CO}_3^{2-}$&$(\text{Na},\text{K},\text{NH}_4,\text{Li})^+$&Most other cations\\
+			\hline $\text{PO}_4^{3-}$&$\text{Na}^+,\text{K}^+,\text{NH}_4^+$&Most other cations\\
+			\hline $\text{O}^{2-}$&No\textsubscript{common} cations&Most cations\\ 
+			\hline $(\text{Na,K,NH}_4)^{+}$&Most Anions&$(\text{NH}_4)_2\text{C}_2\text{O}_4$\\
+			\hline $\text{Bi}^{3+}$&Nothing&Most anions\\
+			\hline $\text{As}^{3+}$&$\text{I}^-$&Most anions\\
+			\hline $\text{Sb}^{3+}$&$\text{Cl}^-$&Most anions\\
+			\hline\end{tabular}};
+	%Metal Activity
+	\node at ($(N.north)+(0,1.2)$) (MetalAct)[draw] [text width = 11cm] {Li\up{+}, K\up{+}, Ba\up{2+}, Ca\up{2+}, Na\up{+}, Mg\up{2+}, Al\up{3+}, Mn\up{+2}, Zn\up{2+}, Cr\up{3+,2+}, Fe\up{3+,2+}, Co\up{2+}, Ni\up{+}, Sn\up{2+}, Pb\up{2+}, 2H\up{+}, Cu\up{2+,+}, Ag\up{+}, Hg\up{2+}, Pt\up{2+}, Au\up{3+,+}};
 \end{tikzpicture}
 
 \end{document}
