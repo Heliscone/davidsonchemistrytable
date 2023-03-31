@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  31 MAR 2023 09:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  31 MAR 2023 14:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -559,8 +559,7 @@ ftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
 \l__pdf_internal_box=\box85
-)
-No file "TeXTable 3.31".aux.
+) (TeXTable 3.31.aux)
 \openout1 = `"TeXTable 3.31.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
@@ -654,10 +653,10 @@ Overfull \hbox (167.03644pt too wide) in paragraph at lines 309--332
 {C:/Users/evan1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 (TeXTable 3.31.aux) ) 
 Here is how much of TeX's memory you used:
- 16860 strings out of 476339
- 354126 string characters out of 5787650
- 2062340 words of memory out of 5000000
- 36999 multiletter control sequences out of 15000+600000
+ 16870 strings out of 476339
+ 354354 string characters out of 5787650
+ 2064340 words of memory out of 5000000
+ 37007 multiletter control sequences out of 15000+600000
  524184 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,21n,118p,851b,822s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -683,7 +682,7 @@ nts/cm/cmsy5.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmsy7.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/
 type1/public/amsfonts/symbols/msam10.pfb><C:/Users/evan1/Documents/Github/MiKTe
 X/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "TeXTable 3.31.pdf" (1 page, 230490 bytes).
+Output written on "TeXTable 3.31.pdf" (1 page, 231611 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
