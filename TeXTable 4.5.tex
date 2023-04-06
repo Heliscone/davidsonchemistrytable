@@ -20,16 +20,18 @@
 \newcommand{\ElemLabelNEN}[4]{
   \begin{minipage}{1.8cm}
 	\centering
-		{\textbf{#1}\hfill #4}%
+		{\textbf{#1}}%
 		\vspace{2mm}
 		\linebreak
 		\textbf{#3}%
+		\linebreak
+		{#4}
 		\linebreak {#2}
   \end{minipage}
 }
 \newcommand{\NaturalElem}[5]{\ElemLabels{#1}{#2}{\LARGE {#3}}{#4}{#5}}
-\newcommand{\SyntheticElem}[4]{\ElemLabelNEN{#1}{#2}{\color{gray}{\LARGE {#3}}}{#4}}
-\newcommand{\SyntheticElemEN}[5]{\ElemLabels{#1}{#2}{\color{gray}{\LARGE {#3}}}{#4}{#5}}
+\newcommand{\SyntheticElem}[4]{\ElemLabelNEN{#1}{#2}{\color{white}{\LARGE {#3}}}{#4}}
+\newcommand{\SyntheticElemEN}[5]{\ElemLabels{#1}{#2}{\color{white}{\LARGE {#3}}}{#4}{#5}}
 \newcommand{\up}[1]{\textsuperscript{#1}}
 \begin{document}
 \begin{tikzpicture}[font=\sffamily]
@@ -96,7 +98,7 @@
 
   % Group 6 - VIB
   \node[right of=V, Metal] (Cr) {\NaturalElem{24}{52.00}{Cr$^{\bigstar}$}{1.66}{Chromium}};
-  \node[below of=Cr, Metal] (Mo) {\NaturalElem{42}{95.94}{Mo$^{\bigstar}$}{2.16}{Molybdenum}};
+  \node[below of=Cr, Metal] (Mo) {\NaturalElem{42}{95.95}{Mo$^{\bigstar}$}{2.16}{Molybdenum}};
   \node[below of=Mo, Metal] (W) {\NaturalElem{74}{183.84}{W}{2.36}{Tungsten}};
   \node[below of=W, Metal] (Sg) {\SyntheticElem{106}{(269)}{Sg}{Seaborgium}};
 
@@ -120,7 +122,7 @@
 
   % Group 10 - VIIIB
   \node[right of=Co, Metal] (Ni) {\NaturalElem{28}{58.69}{Ni}{1.91}{Nickel}};
-  \node[below of=Ni, Metal] (Pd) {\NaturalElem{46}{106.42}{Pd$^{\bigstar}$}{2.20}{Palladium}};
+  \node[below of=Ni, Metal] (Pd) {\NaturalElem{46}{106.42}{Pd$^{\bigstar\bigstar}$}{2.20}{Palladium}};
   \node[below of=Pd, Metal] (Pt) {\NaturalElem{78}{195.08}{Pt}{2.28}{Platinum}};
   \node[below of=Pt, Metal] (Ds) {\SyntheticElem{110}{(281)}{Ds}{Darmstadtium}};
 
@@ -131,7 +133,7 @@
   \node[below of=Au, Metal] (Rg) {\SyntheticElem{111}{(282)}{Rg}{Roentgenium}};
 
   % Group 12 - IIB
-  \node[right of=Cu, Metal] (Zn) {\NaturalElem{30}{65.39}{Zn}{1.65}{Zinc\textsuperscript{(2+)}}};
+  \node[right of=Cu, Metal] (Zn) {\NaturalElem{30}{65.38}{Zn}{1.65}{Zinc\textsuperscript{(2+)}}};
   \node[below of=Zn, Metal] (Cd) {\NaturalElem{48}{112.41}{Cd}{1.69}{Cadmium}};
   \node[below of=Cd, Metal] (Hg) {\NaturalElem{80}{200.59}{Hg}{2.00}{Mercury}};
   \node[below of=Hg, Metal] (Uub) {\SyntheticElem{112}{(285)}{Cn}{Copernicium}};
@@ -147,7 +149,7 @@
   % Group 14 - IVA
   \node[right of=B, Nonmetal] (C) {\NaturalElem{6}{12.01}{C}{2.55}{Carbon}};
   \node[below of=C, Metalloid] (Si) {\NaturalElem{14}{28.09}{Si}{1.90}{Silicon}};
-  \node[below of=Si, Metalloid] (Ge) {\NaturalElem{32}{72.64}{Ge}{2.01}{Germanium}};
+  \node[below of=Si, Metalloid] (Ge) {\NaturalElem{32}{72.63}{Ge}{2.01}{Germanium}};
   \node[below of=Ge, Metal] (Sn) {\NaturalElem{50}{118.71}{Sn$^{\bigstar}$}{1.96}{Tin}};
   \node[below of=Sn, Metal] (Pb) {\NaturalElem{82}{207.2}{Pb}{1.87}{Lead}};
   \node[below of=Pb, Metal] (Uuq) {\SyntheticElem{114}{(289)}{Fl}{Flerovium}};
@@ -161,9 +163,9 @@
   \node[below of=Bi, Metal] (Uup) {\SyntheticElem{115}{(290)}{Mc}{Moscovium}};
 
   % Group 16 - VIA
-  \node[right of=N, Nonmetal] (O) {\NaturalElem{8}{116.00}{O\textsubscript{2}}{3.44}{Oxygen}};
+  \node[right of=N, Nonmetal] (O) {\NaturalElem{8}{16.00}{O\textsubscript{2}}{3.44}{Oxygen}};
   \node[below of=O, Nonmetal] (S) {\NaturalElem{16}{32.10}{S}{2.38}{Sulphur}};
-  \node[below of=S, Nonmetal] (Se) {\NaturalElem{34}{78.96}{Se}{2.55}{Selenium}};
+  \node[below of=S, Nonmetal] (Se) {\NaturalElem{34}{78.97}{Se}{2.55}{Selenium}};
   \node[below of=Se, Metalloid] (Te) {\NaturalElem{52}{127.60}{Te}{2.1}{Tellurium}};
   \node[below of=Te, Metalloid] (Po) {\NaturalElem{84}{(209)}{Po}{2.0}{Polonium}};
   \node[below of=Po, Metal] (Uuh) {\SyntheticElem{116}{(293)}{Lv}{Livermorium}};
@@ -174,7 +176,7 @@
   \node[below of=Cl, Halogen] (Br) {\NaturalElem{35}{79.90}{Br\textsubscript{2}}{2.96}{Bromine}};
   \node[below of=Br, Halogen] (I) {\NaturalElem{53}{126.90}{I\textsubscript{2}}{2.86}{Iodine}};
   \node[below of=I, Halogen] (At) {\NaturalElem{85}{(210)}{At}{2.2}{Astatine}};
-  \node[below of=At, Element] (Uus) {\SyntheticElem{117}{(294)}{Ts}{Tennessine}};
+  \node[below of=At, Halogen] (Uus) {\SyntheticElem{117}{(294)}{Ts}{Tennessine}};
 
   % Group 18 - VIIIA
   \node[right of=F, NobleGas] (Ne) {\NaturalElem{10}{20.18}{Ne}{}{Neon}};
@@ -183,7 +185,7 @@
   \node[below of=Ar, NobleGas] (Kr) {\NaturalElem{36}{83.80}{Kr}{3.00}{Krypton}};
   \node[below of=Kr, NobleGas] (Xe) {\NaturalElem{54}{131.29}{Xe}{2.60}{Xenon}};
   \node[below of=Xe, NobleGas] (Rn) {\NaturalElem{86}{(222)}{Rn}{2.2}{Radon}};
-  \node[below of=Rn, Nonmetal] (Uuo) {\SyntheticElem{118}{(294)}{Og}{Ogannesson}};
+  \node[below of=Rn, NobleGas] (Uuo) {\SyntheticElem{118}{(294)}{Og}{Ogannesson}};
 
   % Period
   \node[left of=H, PeriodLabel] (Period1) {1};
@@ -265,6 +267,7 @@
      	rectangle +(1em, 1em) node[right, yshift=-1ex] (NobleGas) {Noble Gas};
      \fill[LanthanideActinideFill] ($(NobleGas.west) - (1em,1.7em)$)
      	rectangle +(1em, 1em) node[right, yshift=-1ex] (Lactinide) {Lanthanide/Actinide};
+
      
      \node at ($(AcLr.south)-(0em,1.25cm)$) [draw, Element, fill=gray] (legend) {\NaturalElem{Z}{mass}{\LARGE Sym}{E.N.}{Name}};
 	%\node[align=left] at (Ac -| Ra) {black: natural\\\color{gray}gray: man-made};
