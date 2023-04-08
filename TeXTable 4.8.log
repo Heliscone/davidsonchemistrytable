@@ -2,8 +2,8 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./TeXTable 4.5.tex"
-(TeXTable 4.5.tex
+**"./TeXTable 4.8.tex"
+(TeXTable 4.8.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-07>
 (C:\Users\evan1\Documents\Github\MiKTeX\MiKTeX\tex/latex/standalone\standalone.
@@ -559,8 +559,9 @@ ftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
 \l__pdf_internal_box=\box85
-) (TeXTable 4.5.aux)
-\openout1 = `"TeXTable 4.5.aux"'.
+)
+No file "TeXTable 4.8".aux.
+\openout1 = `"TeXTable 4.8.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
@@ -676,12 +677,12 @@ Overfull \hbox (167.03644pt too wide) in paragraph at lines 312--335
 [1
 
 {C:/Users/evan1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(TeXTable 4.5.aux) ) 
+(TeXTable 4.8.aux) ) 
 Here is how much of TeX's memory you used:
- 16870 strings out of 476339
- 354341 string characters out of 5787650
+ 16867 strings out of 476339
+ 354226 string characters out of 5787650
  2064340 words of memory out of 5000000
- 37007 multiletter control sequences out of 15000+600000
+ 37006 multiletter control sequences out of 15000+600000
  524184 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,21n,118p,850b,822s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -707,7 +708,7 @@ ts/cm/cmsy5.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmsy7.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb><C:/Users/evan1/Documents/Github/MiKTeX
 /MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "TeXTable 4.5.pdf" (1 page, 231507 bytes).
+Output written on "TeXTable 4.8.pdf" (1 page, 231507 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
