@@ -274,6 +274,9 @@
 		rectangle +(4.5em, 1em) node[right, yshift=-1ex] (Synthetic) {};
 	\fill[white] ($(Lactinide.west) - (1em,1.7em)$)
 		node[right, xshift=2.2ex, yshift=1.1ex] (Synthetic) {Synthetic};
+	\fill[black] ($(NobleGas.west) - (0.8em,3.5em)$)
+		node[right, xshift = 1ex] (Exception) {Aufbau Exception}
+		node[left, xshift = 2.5ex] (Star) {$\bigstar$};
      \node at ($(AcLr.south)-(0em,1.25cm)$) [draw, Element, fill=gray] (legend) {\NaturalElem{Z}{mass}{\LARGE Sym}{E.N.}{Name}};
 	%\node[align=left] at (Ac -| Ra) {black: natural\\\color{gray}gray: man-made};
 	% Draw dotted lines connecting Lanthanide breakout to main table
