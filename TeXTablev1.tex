@@ -31,21 +31,23 @@
 }
 \newcommand{\NaturalElem}[5]{\ElemLabels{#1}{#2}{\LARGE {#3}}{#4}{#5}}
 \newcommand{\SyntheticElem}[4]{\ElemLabelNEN{#1}{#2}{\color{white}{\LARGE {#3}}}{#4}}
+\newcommand{\SyntheticElemToo}[4]{\ElemLabelNEN{#1}{#2}{\color{gray}{\LARGE {#3}}}{#4}}
 \newcommand{\SyntheticElemEN}[5]{\ElemLabels{#1}{#2}{\color{white}{\LARGE {#3}}}{#4}{#5}}
 \newcommand{\up}[1]{\textsuperscript{#1}}
 \begin{document}
 \begin{tikzpicture}[font=\sffamily]
 
   % Fill Color Styles
-	\tikzstyle{ElementFill} = [fill=yellow!15]
+	\tikzstyle{ElementFill} = [fill=yellow!40]
 	\tikzstyle{AlkaliMetalFill} = [fill=blue!55]
 	\tikzstyle{AlkalineEarthMetalFill} = [fill=blue!40]
 	\tikzstyle{MetalFill} = [fill=blue!25]
 	\tikzstyle{MetalloidFill} = [fill=orange!40]
 	\tikzstyle{NonmetalFill} = [fill=teal!40]
-	\tikzstyle{HalogenFill} = [fill=yellow!40]
+	\tikzstyle{HalogenFill} = [fill=yellow!50]
 	\tikzstyle{NobleGasFill} = [fill=green!55]
 	\tikzstyle{LanthanideActinideFill} = [fill=red!40]
+	\tikzstyle{Synthetic} = [fill=white]
 
   % Element Styles
 	\tikzstyle{Element} = [ElementFill,
@@ -57,6 +59,7 @@
 	\tikzstyle{Nonmetal} = [Element, NonmetalFill]
 	\tikzstyle{Halogen} = [Element, HalogenFill]
 	\tikzstyle{NobleGas} = [Element, NobleGasFill]
+	\tikzstyle{Synthetic} = [Element, SyntheticFill] draw=black
 	\tikzstyle{LanthanideActinide} = [Element, LanthanideActinideFill]
 	\tikzstyle{PeriodLabel} = [font={\sffamily\LARGE}, node distance=1.5cm]
 	\tikzstyle{GroupLabel} = [font={\sffamily\large}, minimum width=2.75cm, node distance=1.5cm]
@@ -176,7 +179,7 @@
   \node[below of=Cl, Halogen] (Br) {\NaturalElem{35}{79.90}{Br\textsubscript{2}}{2.96}{Bromine}};
   \node[below of=Br, Halogen] (I) {\NaturalElem{53}{126.90}{I\textsubscript{2}}{2.86}{Iodine}};
   \node[below of=I, Halogen] (At) {\NaturalElem{85}{(210)}{At}{2.2}{Astatine}};
-  \node[below of=At, Halogen] (Uus) {\SyntheticElem{117}{(294)}{Ts}{Tennessine}};
+  \node[below of=At, Halogen] (Uus) {\SyntheticElemToo{117}{(294)}{Ts}{Tennessine}};
 
   % Group 18 - VIIIA
   \node[right of=F, NobleGas] (Ne) {\NaturalElem{10}{20.18}{Ne}{}{Neon}};
@@ -251,24 +254,29 @@
   \node[right of=No, LanthanideActinide] (Lr) {\SyntheticElemEN{103}{(266)}{Lr}{1.3}{Lawrencium}};
 
   % Legend
-	\fill[AlkaliMetalFill] ($(Ra.south) + (-4em, -1.1 em)$)
-		rectangle + (1em, 1em) node[right, yshift=-1ex]  (AlkaliMetal) {Alkali Metal};
+	\fill[AlkaliMetalFill] ($(Ra.south) + (-5em, -2 em)$)
+		rectangle + (1em, 1em) node[right, yshift=-1.1ex]  (AlkaliMetal) {Alkali Metal};
 	\fill[AlkalineEarthMetalFill] ($(AlkaliMetal.west) - (1em,1.7em)$)
-		rectangle +(1em, 1em) node[right, yshift=-1ex] (AlkalineEarthMetal) {Alkaline-Earth};
+		rectangle +(1em, 1em) node[right, yshift=-1.1ex] (AlkalineEarthMetal) {Alkaline-Earth};
 	\fill[MetalFill] ($(AlkalineEarthMetal.west) - (1em,1.7em)$)
-		rectangle +(1em, 1em) node[right, yshift=-1ex] (Metal) {Metal};
+		rectangle +(1em, 1em) node[right, yshift=-1.1ex] (Metal) {Metal};
 	\fill[MetalloidFill] ($(Metal.west) - (1em,1.7em)$)
-		rectangle +(1em, 1em) node[right, yshift=-1ex] (Metalloid) {Metalloid};
+		rectangle +(1em, 1em) node[right, yshift=-1.1ex] (Metalloid) {Metalloid};
 	\fill[NonmetalFill] ($(Metalloid.west) - (1em,1.7em)$)
-		rectangle +(1em, 1em) node[right, yshift=-1ex] (Non-metal) {Non-metal};
+		rectangle +(1em, 1em) node[right, yshift=-1.1ex] (Non-metal) {Non-metal};
 	\fill[HalogenFill] ($(Non-metal.west) - (1em,1.7em)$)
-		rectangle +(1em, 1em) node[right, yshift=-1ex] (Halogen) {Halogen};
-     \fill[NobleGasFill] ($(Halogen.west) - (1em,1.7em)$)
-     	rectangle +(1em, 1em) node[right, yshift=-1ex] (NobleGas) {Noble Gas};
-     \fill[LanthanideActinideFill] ($(NobleGas.west) - (1em,1.7em)$)
-     	rectangle +(1em, 1em) node[right, yshift=-1ex] (Lactinide) {Lanthanide/Actinide};
-
-     
+		rectangle +(1em, 1em) node[right, yshift=-1.1ex] (Halogen) {Halogen};
+	\fill[NobleGasFill] ($(Halogen.west) - (1em,1.7em)$)
+		rectangle +(1em, 1em) node[right, yshift=-1.1ex] (NobleGas) {Noble Gas};
+	\fill[LanthanideActinideFill] ($(NobleGas.west) - (1em,1.7em)$)
+		rectangle +(1em, 1em) node[right, yshift=-1.1ex] (Lactinide) {Lanthanide/Actinide};
+	\fill[gray] ($(Lactinide.west) - (0em,1.7em)$)
+		rectangle +(4.5em, 1em) node[right, yshift=-1ex] (Synthetic) {};
+	\fill[white] ($(Lactinide.west) - (1em,1.7em)$)
+		node[right, xshift=2.2ex, yshift=1.1ex] (Synthetic) {Synthetic};
+	\fill[black] ($(NobleGas.west) - (0.8em,3.5em)$)
+		node[right, xshift = 1ex] (Exception) {Aufbau Exception}
+		node[left, xshift = 2.5ex] (Star) {$\bigstar$};
      \node at ($(AcLr.south)-(0em,1.25cm)$) [draw, Element, fill=gray] (legend) {\NaturalElem{Z}{mass}{\LARGE Sym}{E.N.}{Name}};
 	%\node[align=left] at (Ac -| Ra) {black: natural\\\color{gray}gray: man-made};
 	% Draw dotted lines connecting Lanthanide breakout to main table
@@ -283,11 +291,11 @@
 
 %%FORMULAS%%
 	%Periodic Trends
-	\node at ($(Ra.south)-(-1,3.5)$) (TrendOne) [draw] {EN, IE, EA, \& $\mathbb{Z}_{eff}$ increase $\rightarrow\uparrow$};
+	\node at ($(Ra.south)-(-1,4.8)$) (TrendOne) [draw] {EN, IE, EA, \& $\mathbb{Z}_{eff}$ increase $\rightarrow\uparrow$};
 	\node at ($(TrendOne.south)-(0,0.3)$) [draw] {Radius \& Metallic increase $\leftarrow\downarrow$};
 	%Special Compounds
 	\node at ($(Fr.south)-(-0.2,1.8)-(0.55,1.15)$) (Gas) [text width = 2cm, align=left] {\textit{Gas}\\ CO\\ CO\textsubscript{2}\\ CH\textsubscript{4}\\ C\textsubscript{2}H\textsubscript{6}\\ C\textsubscript{3}H\textsubscript{8}\\ C\textsubscript{4}H\textsubscript{10} \\ NO NO\textsubscript{2}\\ N\textsubscript{2}O NH\textsubscript{3}\\ SO\textsubscript{3} SO\textsubscript{2}\\ H\textsubscript{2}S HCl};
-	\node at ($(Fr.south)-(-0.2,1.8)$) (SuperSeven) [draw] [text width=1cm,align=left] {\textit{Super\textsuperscript{7}}\\ HI\\ HBr\\ HCl\\ HNO\textsubscript{3}\\ H\textsubscript{2}SO\textsubscript{4}\\ HClO\textsubscript{3}\\ HClO\textsubscript{4}};
+	\node at ($(Fr.south)-(0,1.8)$) (SuperSeven) [draw] [text width=1cm,align=left] {\textit{Super\textsuperscript{7}}\\ HI\\ HBr\\ HCl\\ HNO\textsubscript{3}\\ H\textsubscript{2}SO\textsubscript{4}\\ HClO\textsubscript{3}\\ HClO\textsubscript{4}};
 	%Constants
 ;	\node at ($(Be.north)+(1,5.8)$) (Constants) [draw] [text width = 9.4cm, align=left] {$R_{\text{gas-law}}=0.0821\dfrac{\text{L}\cdot\text{atm}}{\text{mol}\cdot\text{K}}=62.4\dfrac{\text{L}\cdot\text{mmHg}}{\text{mol}\cdot{K}}=8.314\dfrac{\text{L}\cdot\text{kPa}\lor\text{J}}{\text{mol}\cdot\text{K}}$\\ \vspace{0.3cm}
 $\dfrac{453.6\text{ g}}{1\text{ lb}}=\dfrac{2.54\text{ cm}}{1\text{ in}}=\dfrac{0.946\text{ L}}{1\text{ qt}}=\dfrac{6.022\times10^{23}\text{ units}}{\text{mol}}=\dfrac{22.4\text{ L}}{\text{mol}}$\\ \vspace{0.3cm}$\dfrac{1\text{ g}_{\text{water}}}{1\text{ mL}_{\text{water}}}=\dfrac{P_{\text{sea}}}{101325\text{ Pa}}=\dfrac{1\text{ atm}}{760\text{ mmHg}}=\dfrac{1\text{ atm}}{14.7\text{ psi}}=\dfrac{1\text{ kcal}}{4.184\text{ kJ}}$\\ \vspace{0.3cm} $^{\circ}\text{C}=\frac{5}{9}(^{\circ}\text{F}-32)$ and $^{\circ}\text{F}=\frac95 ^{\circ}\text{C}+32$ and $1\text{V}=\frac{\text{J}}{\text{C}}$\\ \vspace{0.3cm} $h=6.626\times10^{-34}\text{Js}\lor\text{kgm}^2\text{s}^{-1}$ and $c=3.00\times10^8\text{ ms}^{-1}$};
@@ -336,7 +344,13 @@ $\dfrac{453.6\text{ g}}{1\text{ lb}}=\dfrac{2.54\text{ cm}}{1\text{ in}}=\dfrac{
 	%Metal Activity
 	\node at ($(N.north)+(0,1.2)$) (MetalAct)[draw] [text width = 11cm] {Li\up{+}, K\up{+}, Ba\up{2+}, Ca\up{2+}, Na\up{+}, Mg\up{2+}, Al\up{3+}, Mn\up{+2}, Zn\up{2+}, Cr\up{3+,2+}, Fe\up{3+,2+}, Co\up{2+}, Ni\up{+}, Sn\up{2+}, Pb\up{2+}, 2H\up{+}, Cu\up{2+,+}, Ag\up{+}, Hg\up{2+}, Pt\up{2+}, Au\up{3+,+}};
 	%Dimensions
-	\node at ($(Gasses.north)+(0,0.4)$) (Dimen) [text width = 5cm] {[J]$=\text{kg m}^2\text{s}^{-2}$, $\text{[N]}=\text{kg m s}^{-1}$, $\text{[Pa]}=\text{N m}^{-2}=\text{kg (ms)}^{-1}$};
+	\node at ($(Gasses.north)+(0,0.4)$) (Dimen) [text width = 6cm] {[J]$=\text{kg m}^2\text{s}^{-2}$, $\text{[N]}=\text{kg m s}^{-1}$, \\ $\text{[Pa]}=\text{N m}^{-2},\text{ kg(ms)}^{-1}$, $[\text{V}]=\text{JC}^{-1}$.};
+	\node at ($(MetalAct.north)+(0,2)$) [draw] [text width = 10cm] {
+			$\varepsilon=E^{\circ}_{\text{cell}}=E^{\circ}_{\text{red}}(\text{cathode})-E^{\circ}_{\text{red}}(\text{anode})$, and $E^{\circ}_{\text{cell}\substack{\text{voltaic}\\ \text{galvanic}}}>0$. \\
+			$\triangle G=-nFE$, where $F=96485\text{ C(mol)}^{-1}=96485\text{J (Vmol)}^{-1}$.\\
+			$-nFE=-nFE^{\circ}+RT\ln Q$, so $E=E^{\circ}-\frac{RT}{nF}\ln Q$ (Nernst).\\ 
+			$\triangle G=w_{\text{max}}=-nFE$. And $w=nFE_{\text{applied}}$. Also, $Q=It$.
+	};
 \end{tikzpicture}
 
 \end{document}
