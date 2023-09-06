@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  31 AUG 2023 08:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  6 SEP 2023 09:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./TeXTablePoster.tex
-(TeXTablePoster.tex
+**./TeXTablev1.tex
+(TeXTablev1.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-07>
 (C:\Users\evan1\Documents\Github\MiKTeX\MiKTeX\tex/latex/standalone\standalone.
@@ -559,23 +559,23 @@ ftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
 \l__pdf_internal_box=\box85
-) (TeXTablePoster.aux)
-\openout1 = `TeXTablePoster.aux'.
+) (TeXTablev1.aux)
+\openout1 = `TeXTablev1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 (C:\Users\evan1\Documents\Github\MiKTeX\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
@@ -612,83 +612,115 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no k in font nullfont!
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
 
 (C:\Users\evan1\Documents\Github\MiKTeX\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
 
 (C:\Users\evan1\Documents\Github\MiKTeX\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (6.06506pt too wide) in paragraph at lines 93--93
+Overfull \hbox (8.91008pt too wide) in paragraph at lines 94--94
  \OT1/cmss/m/n/10 Rutherfordium 
  []
 
 
-Overfull \hbox (2.86841pt too wide) in paragraph at lines 103--103
+Overfull \hbox (2.86841pt too wide) in paragraph at lines 104--104
  \OT1/cmss/m/n/10 Molybdenum 
  []
 
 
-Overfull \hbox (5.57895pt too wide) in paragraph at lines 129--129
+Overfull \hbox (8.42397pt too wide) in paragraph at lines 130--130
  \OT1/cmss/m/n/10 Darmstadtium 
  []
 
 
-Overfull \hbox (1.00948pt too wide) in paragraph at lines 135--135
+Overfull \hbox (3.85449pt too wide) in paragraph at lines 136--136
  \OT1/cmss/m/n/10 Roentgenium 
  []
 
 
-Overfull \hbox (4.37897pt too wide) in paragraph at lines 139--139
- \OT1/cmss/m/n/10 Cadmium$[]$ 
+Overfull \hbox (0.97948pt too wide) in paragraph at lines 142--142
+ \OT1/cmss/m/n/10 Copernicium 
  []
 
 
-Overfull \hbox (10.17397pt too wide) in paragraph at lines 224--224
+Overfull \hbox (0.64618pt too wide) in paragraph at lines 174--174
+ \OT1/cmss/m/n/10 Livermorium 
+ []
+
+
+Overfull \hbox (10.17397pt too wide) in paragraph at lines 225--225
  \OT1/cmss/m/n/10 Praseodymium 
  []
 
 
-Overfull \hbox (3.11838pt too wide) in paragraph at lines 241--241
+Overfull \hbox (3.11838pt too wide) in paragraph at lines 242--242
  \OT1/cmss/m/n/10 Protactinium 
  []
 
 
-Overfull \hbox (3.7017pt too wide) in paragraph at lines 251--251
+Overfull \hbox (3.7017pt too wide) in paragraph at lines 252--252
  \OT1/cmss/m/n/10 Mendelevium 
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 299.
+
+LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 300.
+
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--345
+[][] 
+ []
+
+
+Overfull \hbox (167.03644pt too wide) in paragraph at lines 322--345
+[]  
  []
 
 [1
 
 {C:/Users/evan1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(TeXTablePoster.aux) ) 
+(TeXTablev1.aux) ) 
 Here is how much of TeX's memory you used:
- 16774 strings out of 476339
- 352718 string characters out of 5787650
- 1999340 words of memory out of 5000000
- 36920 multiletter control sequences out of 15000+600000
- 520077 words of font info for 62 fonts, out of 8000000 for 9000
+ 16893 strings out of 476339
+ 354731 string characters out of 5787650
+ 2072340 words of memory out of 5000000
+ 37030 multiletter control sequences out of 15000+600000
+ 524184 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,10n,118p,529b,819s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/evan1/Documents/Github/MiKTe
-X/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/evan1/Documents/Gi
-thub/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/evan1/Do
-cuments/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/User
-s/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb
-><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmssbx10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/typ
+ 117i,21n,118p,846b,824s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/evan1/Documents/Github
+/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/evan1/Documen
+ts/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/evan
+1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Us
+ers/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pf
+b><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmss10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmss12.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmss17.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/evan1/Documents/Github/MiKTe
+X/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/evan1/Documents/
+Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/evan1
+/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/U
+sers/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsy5.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmsy7.pfb><C:/Users/evan1/Documents/Github/MiKTeX/MiKTeX/fonts/typ
 e1/public/amsfonts/symbols/msam10.pfb><C:/Users/evan1/Documents/Github/MiKTeX/M
 iKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TeXTablePoster.pdf (1 page, 114265 bytes).
+Output written on TeXTablev1.pdf (1 page, 234061 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

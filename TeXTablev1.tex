@@ -131,7 +131,7 @@
 
   % Group 11 - IB
   \node[right of=Ni, Metal] (Cu) {\NaturalElem{29}{63.55}{Cu$^{\bigstar}$}{1.90}{Copper}};
-  \node[below of=Cu, Metal] (Ag) {\NaturalElem{47}{107.87}{Ag}{1.93}{Silver\textsuperscript{(1+)}}};
+  \node[below of=Cu, Metal] (Ag) {\NaturalElem{47}{107.87}{Ag$^{\bigstar}$}{1.93}{Silver\textsuperscript{(1+)}}};
   \node[below of=Ag, Metal] (Au) {\NaturalElem{79}{196.97}{Au$^{\bigstar}$}{2.54}{Gold}};
   \node[below of=Au, Metal] (Rg) {\SyntheticElem{111}{(282)}{Rg}{Roentgenium}};
 
@@ -153,7 +153,7 @@
   \node[right of=B, Nonmetal] (C) {\NaturalElem{6}{12.01}{C}{2.55}{Carbon}};
   \node[below of=C, Metalloid] (Si) {\NaturalElem{14}{28.09}{Si}{1.90}{Silicon}};
   \node[below of=Si, Metalloid] (Ge) {\NaturalElem{32}{72.63}{Ge}{2.01}{Germanium}};
-  \node[below of=Ge, Metal] (Sn) {\NaturalElem{50}{118.71}{Sn$^{\bigstar}$}{1.96}{Tin}};
+  \node[below of=Ge, Metal] (Sn) {\NaturalElem{50}{118.71}{Sn}{1.96}{Tin}};
   \node[below of=Sn, Metal] (Pb) {\NaturalElem{82}{207.2}{Pb}{1.87}{Lead}};
   \node[below of=Pb, Metal] (Uuq) {\SyntheticElem{114}{(289)}{Fl}{Flerovium}};
 
@@ -288,6 +288,8 @@
 
 	% Diagram Title (Change to (0,0) for Poster)
 	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,6.2)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements};
+	\draw[line width = 2.5pt] (B.south west)--(C.south west)--(Si.south west)--(P.south west)--(As.south west)--(Se.south west)--(Te.south west)-- (I.south west)--(At.south west);
+	\draw[line width = 2.5pt] (Al.north west)--(Al.north east)--(Ga.north east)--(Ge.north east)--(Sn.north east)--(Sb.north east)--(Bi.north east)--(Po.north east)--(Po.north east)--(Po.south east);
 
 %%FORMULAS%%
 	%Periodic Trends
