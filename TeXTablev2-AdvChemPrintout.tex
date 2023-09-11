@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
+\usepackage{mhchem}
 \newcommand{\specialcell}[2][c]{
 	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 \newcommand{\ElemLabels}[5]{
@@ -126,12 +127,12 @@
   % Group 10 - VIIIB
   \node[right of=Co, Metal] (Ni) {\NaturalElem{28}{58.69}{Ni}{1.91}{Nickel}};
   \node[below of=Ni, Metal] (Pd) {\NaturalElem{46}{106.42}{Pd$^{\bigstar\bigstar}$}{2.20}{Palladium}};
-  \node[below of=Pd, Metal] (Pt) {\NaturalElem{78}{195.08}{Pt}{2.28}{Platinum}};
+  \node[below of=Pd, Metal] (Pt) {\NaturalElem{78}{195.08}{Pt$^{\bigstar}$}{2.28}{Platinum}};
   \node[below of=Pt, Metal] (Ds) {\SyntheticElem{110}{(281)}{Ds}{Darmstadtium}};
 
   % Group 11 - IB
   \node[right of=Ni, Metal] (Cu) {\NaturalElem{29}{63.55}{Cu$^{\bigstar}$}{1.90}{Copper}};
-  \node[below of=Cu, Metal] (Ag) {\NaturalElem{47}{107.87}{Ag}{1.93}{Silver\textsuperscript{(1+)}}};
+  \node[below of=Cu, Metal] (Ag) {\NaturalElem{47}{107.87}{Ag$^{\bigstar}$}{1.93}{Silver\textsuperscript{(1+)}}};
   \node[below of=Ag, Metal] (Au) {\NaturalElem{79}{196.97}{Au$^{\bigstar}$}{2.54}{Gold}};
   \node[below of=Au, Metal] (Rg) {\SyntheticElem{111}{(282)}{Rg}{Roentgenium}};
 
@@ -153,7 +154,7 @@
   \node[right of=B, Nonmetal] (C) {\NaturalElem{6}{12.01}{C}{2.55}{Carbon}};
   \node[below of=C, Metalloid] (Si) {\NaturalElem{14}{28.09}{Si}{1.90}{Silicon}};
   \node[below of=Si, Metalloid] (Ge) {\NaturalElem{32}{72.63}{Ge}{2.01}{Germanium}};
-  \node[below of=Ge, Metal] (Sn) {\NaturalElem{50}{118.71}{Sn$^{\bigstar}$}{1.96}{Tin}};
+  \node[below of=Ge, Metal] (Sn) {\NaturalElem{50}{118.71}{Sn}{1.96}{Tin}};
   \node[below of=Sn, Metal] (Pb) {\NaturalElem{82}{207.2}{Pb}{1.87}{Lead}};
   \node[below of=Pb, Metal] (Uuq) {\SyntheticElem{114}{(289)}{Fl}{Flerovium}};
 
@@ -287,7 +288,95 @@
 		%(AcLr.south west) -- (Ac.south west);
 
 	% Diagram Title (Change to (0,0) for Poster)
-	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,3)$) (Titles) [scale=3, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements};
+	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,6.2)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements};
+	\draw[line width = 2.5pt] (B.south west)--(C.south west)--(Si.south west)--(P.south west)--(As.south west)--(Se.south west)--(Te.south west)-- (I.south west)--(At.south west);
+	\draw[line width = 2.5pt] (Al.north west)--(Al.north east)--(Ga.north east)--(Ge.north east)--(Sn.north east)--(Sb.north east)--(Bi.north east)--(Po.north east)--(Po.north east)--(Po.south east);
+
+%%FORMULAS%%
+	%Periodic Trends
+	\node at ($(Ra.south)-(-1,4.85)$) (TrendOne) [draw, align=right]
+	{EN, IE, EA, \& $\mathbb{Z}_{eff}$ increase $\rightarrow\uparrow$\\
+	Radius \& Metallic decrease $\rightarrow\uparrow$};
+	%GASSES AND ACIDS
+	\node at ($(Fr.south)-(0.25,2.55)$) (Gas) [text width = 2cm, align=left] 
+	{\textit{Gas}\\ NO\\ NO\textsubscript{2}\\ CO\\ CO\textsubscript{2}\\ CH\textsubscript{4}\\ C\textsubscript{2}H\textsubscript{6}\\ C\textsubscript{3}H\textsubscript{8}\\ C\textsubscript{4}H\textsubscript{10} \\ N\textsubscript{2}O NH\textsubscript{3}\\ SO\textsubscript{3} SO\textsubscript{2}\\ H\textsubscript{2}S HCl};
+	\node at ($(Fr.south)+(0.1,-1.7)$) (SuperSeven) [text width=1cm,align=right] 
+	{\textit{Super\textsuperscript{7}}\\ 
+	HI\\ 
+	HBr\\ 
+	HCl\\ 
+	HNO\textsubscript{3}\\ 
+	H\textsubscript{2}SO\textsubscript{4}\\ 
+	HClO\textsubscript{3}\\ HClO\textsubscript{4}};
+	
+	%UNITS
+
+	\node at ($(Be)+(0,10)$) (Units) [draw] {
+	\begin{tabular}{rl|rl}
+	$\text{(m)L}$& (milli)Liter(s)&$\text{mmHg}$&mm of Mercury\\
+	$\text{g}$&Gram(s)&$\text{(k)J}$&(kilo)Joule(s)\\ 
+	$\text{nm}$& Nanometer(s) & $\text{V}$ &Volt(s)\\ 
+	$\text{atm}$&Atmosphere(s)&$\text{mol}$& Mole(s)\end{tabular}
+	};
+	%CONSTANTS
+	
+	\node at ($(Units.south)-(-1.17,2.5)$) (Constants) {
+	\begin{tabular}{rl}
+	Avogadro's Number & $N_A=6.02214\times10^{23}\text{ mol}^{-1}$\\
+	Faraday Constant & $F=96485.33\text{ C mol}^{-1}$\\
+	Atomic Mass Constant & $1\text{ amu}=1.660538\times10^{-27}\text{ kg}$\\
+	Molar Gas Constant & $R=8.3144\text{ J mol}^{-1}\text{ K}^{-1}$\\
+	$R=62.36\text{ L atm (mol K)}^{-1}$&$=0.08205746\text{L atm}\text{ K}^{-1}\text{ mol}^{-1}$\\
+	Coulomb's Constant&$k_e=8.987551\times10^9\text{N m}^2\text{ C}^{-2}$\\
+	Speed of Light (Vacuum) & $c=2.998\times 10^6\text{ m s}^{-1}$\\
+	Boltzmann Consant & $k_b=1.3807\times10^{-23}\text{ J K}^{-1}$\\
+	Charge on a Proton/Electron & $e=1.602\times10^{-19}\text{ C}$\\
+	Planck's Constant & $h=6.626\times10^{-34}\text{ Js}$\\
+		Specific heat cap. of H\textsubscript{2}O\textsubscript{(l)}& $c=4.18\text{ kJ kg}^{-1} \phantom{}^{\circ}\text{C}^{-1}$
+	\end{tabular}
+	};
+	\node at ($(Ti.north)+(0.5,5)$) (Equilibrium) [align=left] {
+	\textbf{Equilibrium}\\
+	$K_c=\frac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b},$ where $a\text{A}+b\text{B}\rightleftharpoons c\text{C}+d\text{D}$. \\
+$K_p=\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$\\
+$K_a=\frac{[\text{H}^+[\text{A}^-]}{[\text{HA}]}$\\
+$K_b=\frac{[\text{OH}^-][\text{HB}^{+}]}{[\text{B}]}$\\
+$K_w=K_aK_b=[\text{H}^+][\text{OH}^-]$\\
+$=1.0\times10^{-14}$ ($25^{\circ}$ C)\\
+$\text{pH}=-\log[\text{H}^+],\text{pOH}=-\log[\text{OH}^-]$\\
+$\text{pH}+\text{pOH}=14$.\\
+$\text{pH}=\text{p}K_a+\log\frac{[\text{A}^-]}{[\text{HA}]}$\\
+$\text{p}K_a=-\log K_a$,$\text{p}K_b=-\log K_b$.
+	};
+	\node at ($(Constants.east)+(3,-1)$) (Kinetics) [align=left] {
+	\textbf{Kinetics}\\
+	$[A]_t-[A]_0=-kt$ (first order)\\
+	$\ln[A]_t-\ln[A]_0=-k$ (second order)\\
+	$\frac{1}{[A]_t}-\frac{1}{[A]_0}=kt$ (third order)\\
+	$t_{1/2}=\frac{0.963}{t}$ (first order)
+	};
+	\node at ($(Equilibrium.east)+(2,-0.2)$) (Gasses) [align=left] {
+	\textbf{Gasses/Solutions}\\
+	$PV=nRT$\\
+	$P_A=P_{\text{total}}X_A$, where $X_A=\frac{\text{moles }A}{\text{total moles}}$\\
+	$P_{\text{total}}=P_A+P_B+P_C+\cdots$\\
+	$\text{K}=^{\circ}\text{C}+273.15$\\
+	$M=\frac{\text{moles solute}}{\text{Liters solution}}$, $m=\frac{\text{moles solute}}{\text{kg solvent}}$\\
+	$1\text{ atm}=760\text{ mmHg}=760\text{ torr}$\\
+	STP = $273.15\text{ K}$ and $1.0$ atm\\
+	At STP, ideal gas $22.4\text{L mol}^{-1}$.\\
+	Standard conditions are $25^{\circ}$ C and $1$ atm.
+	};
+	\node at ($(Gasses.east)+(2,0)$)	(Bzzt) [align=left] {
+	\textbf{Thermo/Electrochem}\\
+	$q=mc\triangle T$\\
+	$\triangle S^{\circ}=\sum_{\text{products}} S^{\circ}-\sum_{\text{reactants}} S^{\circ}$\\
+	Same for $\triangle H^{\circ}$ and $\triangle G^{\circ}$\\
+	$\triangle G^{\circ}=\triangle H^{\circ}-T\triangle S^{\circ}$\\
+	$=-RT\ln K=-nFE^{\circ}$	\\
+	$I=\frac{q}{t}$\\
+	$E_{\text{cell}}=E^{\circ}_{\text{cell}}-\frac{RT}{nF}\ln Q$.
+	};
 \end{tikzpicture}
 
 \end{document}
