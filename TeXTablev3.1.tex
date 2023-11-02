@@ -288,7 +288,7 @@
 		%(AcLr.south west) -- (Ac.south west);
 
 	% Diagram Title (Change to (0,0) for Poster)
-	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,6.2)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements!};
+	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,6.2)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements v3.1};
 	\draw[line width = 2.5pt] (B.south west)--(C.south west)--(Si.south west)--(P.south west)--(As.south west)--(Se.south west)--(Te.south west)-- (I.south west)--(At.south west);
 	\draw[line width = 2.5pt] (Al.north west)--(Al.north east)--(Ga.north east)--(Ge.north east)--(Sn.north east)--(Sb.north east)--(Bi.north east)--(Po.north east)--(Po.north east)--(Po.south east);
 
@@ -328,14 +328,14 @@
 	Molar Gas Constant & $R=8.3144\text{ J mol}^{-1}\text{ K}^{-1}$\\
 	$R=62.36\text{ L atm (mol K)}^{-1}$&$=0.08205746\text{L atm}\text{ K}^{-1}\text{ mol}^{-1}$\\
 	Coulomb's Constant&$k_e=8.987551\times10^9\text{N m}^2\text{ C}^{-2}$\\
-	Speed of Light (Vacuum) & $c=2.998\times 10^6\text{ m s}^{-1}$\\
+	Speed of Light (Vacuum) & $c=2.998\times 10^8\text{ m s}^{-1}$\\
 	Boltzmann Consant & $k_b=1.3807\times10^{-23}\text{ J K}^{-1}$\\
 	Charge on a Proton/Electron & $e=1.602\times10^{-19}\text{ C}$\\
 	Planck's Constant & $h=6.626\times10^{-34}\text{ Js}$\\
 		Specific heat cap. of H\textsubscript{2}O\textsubscript{(l)}& $c=4.18\text{ kJ kg}^{-1} \phantom{}^{\circ}\text{C}^{-1}$
 	\end{tabular}
 	};
-	\node at ($(Ti.north)+(0.5,5)$) (Equilibrium) [align=left] {
+	\node at ($(Ti.north)+(0.5,4.5)$) (Equilibrium) [align=left] {
 	\textbf{Equilibrium}\\
 	$K_c=\frac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b},$ where $a\text{A}+b\text{B}\rightleftharpoons c\text{C}+d\text{D}$. \\
 $K_p=\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$\\
@@ -355,7 +355,7 @@ $\text{p}K_a=-\log K_a$,$\text{p}K_b=-\log K_b$.
 	$\frac{1}{[A]_t}-\frac{1}{[A]_0}=kt$ (third order)\\
 	$t_{1/2}=\frac{0.963}{t}$ (first order)
 	};
-	\node at ($(Equilibrium.east)+(2,-0.2)$) (Gasses) [align=left] {
+	\node at ($(Equilibrium.east)+(2.2,-0.2)$) (Gasses) [align=left] {
 	\textbf{Gasses/Solutions}\\
 	$PV=nRT$\\
 	$P_A=P_{\text{total}}X_A$, where $X_A=\frac{\text{moles }A}{\text{total moles}}$\\
@@ -376,6 +376,20 @@ $\text{p}K_a=-\log K_a$,$\text{p}K_b=-\log K_b$.
 	$=-RT\ln K=-nFE^{\circ}$	\\
 	$I=\frac{q}{t}$\\
 	$E_{\text{cell}}=E^{\circ}_{\text{cell}}-\frac{RT}{nF}\ln Q$.
+	};
+	\node at ($(Bzzt.north)+(-4.5,1.2)$) (Conversions) [align=left] {
+	\textbf{Conversions}\\
+	$1\text{ L}\cdot\text{atm}=101.3\text{ J}$\\
+	$\text{K}= \phantom{}^{\circ}\text{C}+273.15$\\
+	$1\text{ cal}=4.184\text{ J}$
+	};
+	\node at ($(Bzzt.north)+(0,2)$) (Quantum) [align=left] {
+	\textbf{Quantum}\\
+	$E_{\text{photon}}=hf=\frac{hc}{\lambda}$\\
+	$\lambda=\frac{h}{mv}$\\
+	$R_{H_{\text{Rydberg}}}=1.097\times 10^7\text{ m}^{-1}$\\
+	$\frac{1}{\lambda}=R_H\left(\frac{1}{n_i^2}-\frac{1}{n_f^2}\right)$\\
+	$\triangle E=(-2.18\times10^{-18}\text{ J})\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right)$
 	};
 \end{tikzpicture}
 
