@@ -5,6 +5,7 @@
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{mhchem}
+\usetikzlibrary{backgrounds, fit}
 \newcommand{\specialcell}[2][c]{
 	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 \newcommand{\ElemLabels}[5]{
@@ -203,7 +204,7 @@
   % Group
   \node[above of=H, GroupLabel] (Group1) {1 \hfill IA};
   \node[above of=Be, GroupLabel] (Group2) {2 \hfill IIA};
-  \node[above of=Sc, GroupLabel] (Group3) {3 \hfill IIIA};
+  \node[above of=Sc, GroupLabel] (Group3) {3 \hfill IIIB};
   \node[above of=Ti, GroupLabel] (Group4) {4 \hfill IVB};
   \node[above of=V, GroupLabel] (Group5) {5 \hfill VB};
   \node[above of=Cr, GroupLabel] (Group6) {6 \hfill VIB};
@@ -286,111 +287,219 @@
 	% Draw dotted lines connecting Actinide breakout to main table
 	\draw[thick,dotted] (AcLr.north west) -- (Ac.north west);
 		%(AcLr.south west) -- (Ac.south west);
-
+%%TITLE%%-------------------------------------------------------------------------------
 	% Diagram Title (Change to (0,0) for Poster)
-	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,6.2)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements v3.1};
+	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,7)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements v4};
 	\draw[line width = 2.5pt] (B.south west)--(C.south west)--(Si.south west)--(P.south west)--(As.south west)--(Se.south west)--(Te.south west)-- (I.south west)--(At.south west);
 	\draw[line width = 2.5pt] (Al.north west)--(Al.north east)--(Ga.north east)--(Ge.north east)--(Sn.north east)--(Sb.north east)--(Bi.north east)--(Po.north east)--(Po.north east)--(Po.south east);
 
-%%FORMULAS%%
-	%Periodic Trends
-	\node at ($(Ra.south)-(-1,4.85)$) (TrendOne) [draw, align=right]
-	{EN, IE, EA, \& $\mathbb{Z}_{eff}$ increase $\rightarrow\uparrow$\\
-	Radius \& Metallic decrease $\rightarrow\uparrow$};
-	%GASSES AND ACIDS
-	\node at ($(Fr.south)-(0.25,2.55)$) (Gas) [text width = 2cm, align=left] 
-	{\textit{Gas}\\ NO\\ NO\textsubscript{2}\\ CO\\ CO\textsubscript{2}\\ CH\textsubscript{4}\\ C\textsubscript{2}H\textsubscript{6}\\ C\textsubscript{3}H\textsubscript{8}\\ C\textsubscript{4}H\textsubscript{10} \\ N\textsubscript{2}O NH\textsubscript{3}\\ SO\textsubscript{3} SO\textsubscript{2}\\ H\textsubscript{2}S HCl};
-	\node at ($(Fr.south)+(0.1,-1.7)$) (SuperSeven) [text width=1cm,align=right] 
-	{\textit{Super\textsuperscript{7}}\\ 
-	HI\\ 
-	HBr\\ 
-	HCl\\ 
-	HNO\textsubscript{3}\\ 
-	H\textsubscript{2}SO\textsubscript{4}\\ 
-	HClO\textsubscript{3}\\ HClO\textsubscript{4}};
+%%FORMULAS%%----------------------------------------------------------------------------
+	
+	%CONSTANTS
+	
+	\node (Constants)
+	[anchor = south west, text width = 280pt, label={[font=\sffamily\bfseries,anchor=north]north: Constants}] at ($(Sc.north west)+(0.5,1)$) {
+		\begin{tabular}{ll}
+		&\\
+			Avogadro's Number & $N_A=6.02214\times10^{23}\text{mol}^{-1}$\\
+			Faraday Constant & $F=96485.33\text{ C mol}^{-1}$\\
+			Atomic Mass Constant & $1\text{ amu}=1.660538\times10^{-27}\text{ kg}$\\
+			Molar Gas Constant & $R=8.3145\text{ J (mol K)}^{-1}$\\
+			&$R=0.082057\text{ L atm (mol K)}^{-1}$\\
+			&$R=62.36\text{ L torr (mol K)}^{-1}$\\
+			Coulomb's Constant&$k_e=8.987551\times10^9\text{ N m}^2\text{ C}^{-2}$\\
+			Speed of Light (Vacuum) & $c=2.998\times 10^8\text{ m s}^{-1}$\\
+			Boltzmann Constant & $k_b=1.3807\times10^{-23}\text{ J K}^{-1}$\\
+			Charge on a Proton/Electron & $e=1.602\times10^{-19}\text{ C}$\\
+			Planck's Constant & $h=6.626\times10^{-34}\text{ Js}$\\
+			Specific heat cap. of H\textsubscript{2}O\textsubscript{(l)}& $c=4.18\text{ kJ kg}^{-1} \phantom{}^{\circ}\text{C}^{-1}$
+		\end{tabular}
+	};
 	
 	%UNITS
 
-	\node at ($(Be)+(0,10)$) (Units) [draw] {
-	\begin{tabular}{rl|rl}
-	$\text{(m)L}$& (milli)Liter(s)&$\text{mmHg}$&mm of Mercury\\
-	$\text{g}$&Gram(s)&$\text{(k)J}$&(kilo)Joule(s)\\ 
-	$\text{nm}$& Nanometer(s) & $\text{V}$ &Volt(s)\\ 
-	$\text{atm}$&Atmosphere(s)&$\text{mol}$& Mole(s)\end{tabular}
+	\node (Units)
+	[align = center, text width = 280pt, anchor = south, label={[font=\sffamily\bfseries,anchor=north]north: Units}] at ($(Constants.north)+(0,0.5)$) {
+		\begin{tabular}{rl rl}
+		&\\
+		$\text{(m)L}$& (milli)Liter(s)&$\text{mmHg}$&mm of Mercury\\
+		$\text{g}$&Gram(s)&$\text{(k)J}$&(kilo)Joule(s)\\ 
+		$\text{nm}$& Nanometer(s) & $\text{V}$ &Volt(s)\\ 
+		$\text{atm}$&Atmosphere(s)&$\text{mol}$& Mole(s)\end{tabular}
 	};
-	%CONSTANTS
 	
-	\node at ($(Units.south)-(-1.17,2.5)$) (Constants) {
-	\begin{tabular}{rl}
-	Avogadro's Number & $N_A=6.02214\times10^{23}\text{ mol}^{-1}$\\
-	Faraday Constant & $F=96485.33\text{ C mol}^{-1}$\\
-	Atomic Mass Constant & $1\text{ amu}=1.660538\times10^{-27}\text{ kg}$\\
-	Molar Gas Constant & $R=8.3144\text{ J mol}^{-1}\text{ K}^{-1}$\\
-	$R=62.36\text{ L atm (mol K)}^{-1}$&$=0.08205746\text{L atm}\text{ K}^{-1}\text{ mol}^{-1}$\\
-	Coulomb's Constant&$k_e=8.987551\times10^9\text{N m}^2\text{ C}^{-2}$\\
-	Speed of Light (Vacuum) & $c=2.998\times 10^8\text{ m s}^{-1}$\\
-	Boltzmann Consant & $k_b=1.3807\times10^{-23}\text{ J K}^{-1}$\\
-	Charge on a Proton/Electron & $e=1.602\times10^{-19}\text{ C}$\\
-	Planck's Constant & $h=6.626\times10^{-34}\text{ Js}$\\
-		Specific heat cap. of H\textsubscript{2}O\textsubscript{(l)}& $c=4.18\text{ kJ kg}^{-1} \phantom{}^{\circ}\text{C}^{-1}$
-	\end{tabular}
+	%PERIODIC TRENDS
+	
+	\node (Trend)
+	[align = center, text width = 140pt, text height = 8pt, anchor = south east, label={[font=\sffamily\bfseries,anchor=north]north: Periodic Trends}] at ($(Units.north east)+(0,0.5)$) {
+		\\[2ex]
+		EN, IE, EA, \& $\mathbb{Z}_{eff}$ increase $\rightarrow\uparrow$\\
+		Radius \& Metallic decrease $\rightarrow\uparrow$
 	};
-	\node at ($(Ti.north)+(0.5,4.5)$) (Equilibrium) [align=left] {
-	\textbf{Equilibrium}\\
-	$K_c=\frac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b},$ where $a\text{A}+b\text{B}\rightleftharpoons c\text{C}+d\text{D}$. \\
-$K_p=\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$\\
-$K_a=\frac{[\text{H}^+[\text{A}^-]}{[\text{HA}]}$\\
-$K_b=\frac{[\text{OH}^-][\text{HB}^{+}]}{[\text{B}]}$\\
-$K_w=K_aK_b=[\text{H}^+][\text{OH}^-]$\\
-$=1.0\times10^{-14}$ ($25^{\circ}$ C)\\
-$\text{pH}=-\log[\text{H}^+],\text{pOH}=-\log[\text{OH}^-]$\\
-$\text{pH}+\text{pOH}=14$.\\
-$\text{pH}=\text{p}K_a+\log\frac{[\text{A}^-]}{[\text{HA}]}$\\
-$\text{p}K_a=-\log K_a$,$\text{p}K_b=-\log K_b$.
-	};
-	\node at ($(Constants.east)+(3,-1)$) (Kinetics) [align=left] {
-	\textbf{Kinetics}\\
-	$[A]_t-[A]_0=-kt$ (first order)\\
-	$\ln[A]_t-\ln[A]_0=-k$ (second order)\\
-	$\frac{1}{[A]_t}-\frac{1}{[A]_0}=kt$ (third order)\\
-	$t_{1/2}=\frac{0.963}{t}$ (first order)
-	};
-	\node at ($(Equilibrium.east)+(2.2,-0.2)$) (Gasses) [align=left] {
-	\textbf{Gasses/Solutions}\\
-	$PV=nRT$\\
-	$P_A=P_{\text{total}}X_A$, where $X_A=\frac{\text{moles }A}{\text{total moles}}$\\
-	$P_{\text{total}}=P_A+P_B+P_C+\cdots$\\
-	$\text{K}=^{\circ}\text{C}+273.15$\\
-	$M=\frac{\text{moles solute}}{\text{Liters solution}}$, $m=\frac{\text{moles solute}}{\text{kg solvent}}$\\
-	$1\text{ atm}=760\text{ mmHg}=760\text{ torr}$\\
-	STP = $273.15\text{ K}$ and $1.0$ atm\\
-	At STP, ideal gas $22.4\text{L mol}^{-1}$.\\
-	Standard conditions are $25^{\circ}$ C and $1$ atm.
-	};
-	\node at ($(Gasses.east)+(2,0)$)	(Bzzt) [align=left] {
-	\textbf{Thermo/Electrochem}\\
-	$q=mc\triangle T$\\
-	$\triangle S^{\circ}=\sum_{\text{products}} S^{\circ}-\sum_{\text{reactants}} S^{\circ}$\\
-	Same for $\triangle H^{\circ}$ and $\triangle G^{\circ}$\\
-	$\triangle G^{\circ}=\triangle H^{\circ}-T\triangle S^{\circ}$\\
-	$=-RT\ln K=-nFE^{\circ}$	\\
-	$I=\frac{q}{t}$\\
-	$E_{\text{cell}}=E^{\circ}_{\text{cell}}-\frac{RT}{nF}\ln Q$.
-	};
-	\node at ($(Bzzt.north)+(-4.5,1.2)$) (Conversions) [align=left] {
+	
+	\node (Conversions)
+	[align=center, anchor = south east, text width = 120pt] at ($(Trend.south west)+(-0.5,0)$) {
 	\textbf{Conversions}\\
 	$1\text{ L}\cdot\text{atm}=101.3\text{ J}$\\
 	$\text{K}= \phantom{}^{\circ}\text{C}+273.15$\\
 	$1\text{ cal}=4.184\text{ J}$
+	};	
+	%GASSES AND ACIDS
+	
+	\node (Gas)
+	[align=center, anchor=north east, text height = 175pt] at ($(Conversions.north west)+(-0.5,0)$) {
+		$\textbf{Gas}$\\
+		NO\\ 
+		NO\textsubscript{2}\\ 
+		CO\\ 
+		CO\textsubscript{2}\\ 
+		CH\textsubscript{4}\\ 
+		C\textsubscript{2}H\textsubscript{6}\\
+		C\textsubscript{3}H\textsubscript{8}\\
+		C\textsubscript{4}H\textsubscript{10}\\
+		N\textsubscript{2}O \\
+		NH\textsubscript{3}\\
+		SO\textsubscript{3} \\
+		SO\textsubscript{2}\\
+		H\textsubscript{2}S\\
+		HCl
 	};
-	\node at ($(Bzzt.north)+(0,2)$) (Quantum) [align=left] {
-	\textbf{Quantum}\\
-	$E_{\text{photon}}=hf=\frac{hc}{\lambda}$\\
-	$\lambda=\frac{h}{mv}$\\
-	$R_{H_{\text{Rydberg}}}=1.097\times 10^7\text{ m}^{-1}$\\
-	$\frac{1}{\lambda}=R_H\left(\frac{1}{n_i^2}-\frac{1}{n_f^2}\right)$\\
-	$\triangle E=(-2.18\times10^{-18}\text{ J})\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right)$
+	\node (SuperSeven)
+	[align=center, anchor = north east] at ($(Gas.north west)+(-0.5,0)$) {
+		$\textbf{Super Seven}$\\
+		HI\\ 
+		HBr\\ 
+		HCl\\ 
+		HNO\textsubscript{3}\\ 
+		H\textsubscript{2}SO\textsubscript{4}\\ 
+		HClO\textsubscript{3}\\ HClO\textsubscript{4}
 	};
+	
+	%REAL CONTENT
+	
+	
+	\node (Gasses)
+	[align=center, text width = 165pt, text height = 11.5pt, anchor = south west, label={[font=\sffamily\bfseries,anchor=north]north: Gasses/Solutions}] at ($(Constants.south east)+(0.5,0)$) {
+		\\[2ex]
+		$PV=nRT$\\
+		$P_A=P_{\text{total}}X_A$, where $X_A=\frac{\text{moles }A}{\text{total moles}}$\\
+		$P_{\text{total}}=P_A+P_B+P_C+\cdots$\\
+		$M=\frac{\text{moles solute}}{\text{Liters solution}}$, $m=\frac{\text{moles solute}}{\text{kg solvent}}$\\
+		$1\text{ atm}=760\text{ mmHg}=760\text{ torr}$\\
+		STP = $273.15\text{ K}$ and $1.0$ atm\\
+		At STP, ideal gas $22.4\text{L mol}^{-1}$.\\
+		Standard conditions $25^{\circ}$ C, $1$ atm.
+	};
+	\node (Equilibrium)
+	[align = center, text width = 165pt, text height = 11.5pt, anchor = south east, label={[font=\sffamily\bfseries,anchor=north]north: Equilibrium}] at ($(Gasses.north east)+(0,0.5)$) {
+		\\[2ex]
+		When $a\text{A}+b\text{B}\rightleftharpoons c\text{C}+d\text{D}$,\\
+		$K_c=\frac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b}$ \\
+		$K_p=\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$\\
+		$K_a=\frac{[\text{H}^+][\text{A}^-]}{[\text{HA}]}$\\
+		$K_b=\frac{[\text{OH}^-][\text{HB}^{+}]}{[\text{B}]}$\\
+		$K_w=K_aK_b=[\text{H}^+][\text{OH}^-]$\\
+		$K_w=1.0\times10^{-14}$ ($25^{\circ}$ C)\\
+		$\text{pH}=\text{p}K_a+\log\frac{[\text{A}^-]}{[\text{HA}]}=-\log[\text{H}^+]$\\
+		$\text{pH}+\text{pOH}=14$.\\
+			$\text{p}K_a=-\log K_a$,$\text{p}K_b=-\log K_b$.
+	};
+	\node (Kinetics)
+	[align=center, text width = 160pt, text height = 5pt, anchor = south west, label={[font=\sffamily\bfseries,anchor=north]north: Kinetics}] at ($(Gasses.south east)+(0.5,0)$) {
+		\\[2ex]
+		$[A]_t-[A]_0=-kt$ (1\textsuperscript{st} order)\\
+		$\ln[A]_t-\ln[A]_0=-k$ (2\textsuperscript{nd} order)\\
+		$\frac{1}{[A]_t}-\frac{1}{[A]_0}=kt$ (3\textsuperscript{rd} order)\\
+		$t_{1/2}=\frac{0.963}{t}$ (1\textsuperscript{st} order)
+	};
+	\node (Bzzt)
+	[align = center, text width = 160pt, text height = 5pt, anchor = south west, label={[font=\sffamily\bfseries,anchor=north]north: Thermo/Electrochem}] at ($(Kinetics.north west)+(0,0.5)$) {
+		\\[2ex]
+		$q=mc\triangle T$\\
+		$\triangle S^{\circ}=\sum_{\text{products}} S^{\circ}-\sum_{\text{reactants}} S^{\circ}$\\
+		Same for $\triangle H^{\circ}$ and $\triangle G^{\circ}$\\
+		$\triangle G^{\circ}=\triangle H^{\circ}-T\triangle S^{\circ}$\\
+		$=-RT\ln K=-nFE^{\circ}$	\\
+		$I=\frac{q}{t}$\\
+		$E_{\text{cell}}=E^{\circ}_{\text{cell}}-\frac{RT}{nF}\ln Q$.
+	};
+	\node (Quantum)
+	[align = center, text width = 160pt, text height = 4pt, anchor = south west, label={[font=\sffamily\bfseries,anchor=north]north: Quantum}] at ($(Bzzt.north west)+(0,0.5)$) {
+		\\[2ex]
+		$E_{\text{photon}}=hf=\frac{hc}{\lambda}$\\
+		$\lambda=\frac{h}{mv}$\\
+		$R_{H_{\text{Rydberg}}}=1.097\times 10^7\text{ m}^{-1}$\\
+		$\frac{1}{\lambda}=R_H\left(\frac{1}{n_i^2}-\frac{1}{n_f^2}\right)$\\
+		$\triangle E=(-2.18\times10^{-18}\text{ J})\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right)$
+	};
+	\begin{scope}[on background layer]
+	\node [
+		fill = green!20,
+		rounded corners,
+		fit = (Trend),
+		fill opacity = 0.8
+	] () {} ;
+	\node [
+		fill = red!20,
+		rounded corners,
+		fit = (SuperSeven),
+		fill opacity = 0.8
+	] () {} ;
+	\node [
+		fill = blue!20,
+		rounded corners,
+		fit = (Gas),
+		fill opacity = 0.8
+	] () {} ;
+	\node [
+		fill = green!20,
+		rounded corners,
+		fit = (Units),
+		fill opacity = 0.8,
+	] () {} ;
+	\node [
+		fill = green!20,
+		rounded corners,
+		fit = (Constants),
+		fill opacity = 0.8,
+	] () {} ;
+	\node [
+		fill = blue!20,
+		rounded corners,
+		fit = (Equilibrium),
+		fill opacity = 0.8,
+	] () {} ;
+	\node [
+		fill = blue!20,
+		rounded corners,
+		fit = (Gasses),
+		fill opacity = 0.8,
+	] () {} ;
+	\node [
+		fill = blue!20,
+		rounded corners,
+		fit = (Kinetics),
+		fill opacity = 0.8,
+	] () {} ;
+	\node [
+		fill = blue!20,
+		rounded corners,
+		fit = (Bzzt),
+		fill opacity = 0.8,
+	] () {} ;
+	\node [
+		fill = blue!20,
+		rounded corners,
+		fit = (Quantum),
+		fill opacity = 0.8,
+	] () {} ;
+	\node [
+		fill = green!20,
+		rounded corners,
+		fit = (Conversions),
+		fill opacity = 0.8,
+	] () {} ;
+	\end{scope}
 \end{tikzpicture}
 
 \end{document}
