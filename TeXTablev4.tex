@@ -31,6 +31,10 @@
 		\linebreak {#2}
   \end{minipage}
 }
+\newcommand{\veryshortarrow}[1][3pt]{
+   \hbox{\rule[\dimexpr\fontdimen22\textfont2-.2pt\relax]{#1}{.4pt}}%
+   \mkern-4mu\hbox{\usefont{U}{lasy}{m}{n}\symbol{41}}}
+\newcommand{\veryshortarrows}{\mathrel{\rotatebox{270}{$\veryshortarrow$}}}
 \newcommand{\NaturalElem}[5]{\ElemLabels{#1}{#2}{\LARGE {#3}}{#4}{#5}}
 \newcommand{\SyntheticElem}[4]{\ElemLabelNEN{#1}{#2}{\color{white}{\LARGE {#3}}}{#4}}
 \newcommand{\SyntheticElemToo}[4]{\ElemLabelNEN{#1}{#2}{\color{gray}{\LARGE {#3}}}{#4}}
@@ -289,7 +293,7 @@
 		%(AcLr.south west) -- (Ac.south west);
 %%TITLE%%-------------------------------------------------------------------------------
 	% Diagram Title (Change to (0,0) for Poster)
-	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,7)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements v4};
+	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,7)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements v4.1};
 	\draw[line width = 2.5pt] (B.south west)--(C.south west)--(Si.south west)--(P.south west)--(As.south west)--(Se.south west)--(Te.south west)-- (I.south west)--(At.south west);
 	\draw[line width = 2.5pt] (Al.north west)--(Al.north east)--(Ga.north east)--(Ge.north east)--(Sn.north east)--(Sb.north east)--(Bi.north east)--(Po.north east)--(Po.north east)--(Po.south east);
 
@@ -332,8 +336,9 @@
 	
 	\node (Trend)
 	[align = center, text width = 140pt, text height = 8pt, anchor = south east, label={[font=\sffamily\bfseries,anchor=north]north: Periodic Trends}] at ($(Units.north east)+(0,0.5)$) {
-		\\[2ex]
-		EN, IE, EA, \& $\mathbb{Z}_{eff}$ increase $\rightarrow\uparrow$\\
+		\vspace{-2pt}\\
+		$\mathbb{Z}_{eff}$ increase $\rightarrow\veryshortarrows$\\
+		EN, IE, \& EA increase $\rightarrow\uparrow$\\
 		Radius \& Metallic decrease $\rightarrow\uparrow$
 	};
 	
