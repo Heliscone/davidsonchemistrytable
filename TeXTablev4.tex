@@ -1,10 +1,10 @@
-%Adapted by Evan Lim. Many thanks to Ivan Griffin for the original work, and to Janosh Riebessel, whose remix I have modified. Also, credits to David Carlisle for the \specialcell command.
+% Adapted by Evan Lim. Many thanks to Ivan Griffin for the original work, and to Janosh Riebessel, whose remix I have modified. Also, credits to David Carlisle for the \specialcell command.
 \documentclass[tikz,border=10mm]{standalone}
 \usetikzlibrary{shapes,calc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
-\usepackage{mhchem}
+\usepackage[version=4]{mhchem}
 \usetikzlibrary{backgrounds, fit}
 \newcommand{\specialcell}[2][c]{
 	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
@@ -65,7 +65,7 @@
 	\tikzstyle{Nonmetal} = [Element, NonmetalFill]
 	\tikzstyle{Halogen} = [Element, HalogenFill]
 	\tikzstyle{NobleGas} = [Element, NobleGasFill]
-	\tikzstyle{Synthetic} = [Element, SyntheticFill] draw=black
+	\tikzstyle{Synthetic} = [Element, SyntheticFill]
 	\tikzstyle{LanthanideActinide} = [Element, LanthanideActinideFill]
 	\tikzstyle{PeriodLabel} = [font={\sffamily\LARGE}, node distance=1.5cm]
 	\tikzstyle{GroupLabel} = [font={\sffamily\large}, minimum width=2.75cm, node distance=1.5cm]
