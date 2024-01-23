@@ -11,11 +11,13 @@
 \newcommand{\ElemLabels}[5]{
 	\begin{minipage}{1.8cm}
 	\centering
-		{\textbf{#1}\hfill #4}%
+		{\textbf{#1}\hfill #4}
 		\vspace{2mm}
 		\linebreak
-		{\textbf{#3}}%
-		\linebreak {{#5}} \linebreak
+		\textbf{#3}%
+		\linebreak 
+		{#5} 
+		\linebreak
 		{{#2}}
   \end{minipage}
 }
@@ -97,7 +99,7 @@
 	\node[right of=Sc, Metal] (Ti) {\NaturalElem{22}{47.87}{Ti}{1.54}{Titanium}};
 	\node[below of=Ti, Metal] (Zr) {\NaturalElem{40}{91.22}{Zr}{1.33}{Zirconium}};
 	\node[below of=Zr, Metal] (Hf) {\NaturalElem{72}{178.49}{Hf}{1.3}{Hafnium}};
-	\node[below of=Hf, Metal] (Rf) {\SyntheticElem{104}{(267)}{Rf}{Rutherfordium}};
+	\node[below of=Hf, Metal] (Rf) {\SyntheticElem{104}{(267)}{Rf}{\hspace{-1pt}Rutherfordium}};
 
   % Group 5 - VB
 	\node[right of=Ti, Metal] (V) {\NaturalElem{23}{50.94}{V}{1.63}{Vanadium}};
@@ -133,7 +135,7 @@
   \node[right of=Co, Metal] (Ni) {\NaturalElem{28}{58.69}{Ni}{1.91}{Nickel}};
   \node[below of=Ni, Metal] (Pd) {\NaturalElem{46}{106.42}{Pd$^{\bigstar\bigstar}$}{2.20}{Palladium}};
   \node[below of=Pd, Metal] (Pt) {\NaturalElem{78}{195.08}{Pt$^{\bigstar}$}{2.28}{Platinum}};
-  \node[below of=Pt, Metal] (Ds) {\SyntheticElem{110}{(281)}{Ds}{Darmstadtium}};
+  \node[below of=Pt, Metal] (Ds) {\SyntheticElem{110}{(281)}{Ds}{\hspace{-1pt}Darmstadtium}};
 
   % Group 11 - IB
   \node[right of=Ni, Metal] (Cu) {\NaturalElem{29}{63.55}{Cu$^{\bigstar}$}{1.90}{Copper}};
@@ -228,7 +230,7 @@
   % Lanthanide
   \node[below of=Rf, LanthanideActinide, yshift=0cm] (La) {\NaturalElem{57}{138.91}{La}{1.1}{Lanthanum}};
   \node[right of=La, LanthanideActinide] (Ce) {\NaturalElem{58}{140.12}{Ce}{1.12}{Cerium}};
-  \node[right of=Ce, LanthanideActinide] (Pr) {\NaturalElem{59}{140.91}{Pr}{1.13}{Praseodymium}};
+  \node[right of=Ce, LanthanideActinide] (Pr) {\NaturalElem{59}{140.91}{Pr}{1.13}{\hspace{-1pt}Praseodymium}};
   \node[right of=Pr, LanthanideActinide] (Nd) {\NaturalElem{60}{144.24}{Nd}{1.14}{Neodymium}};
   \node[right of=Nd, LanthanideActinide] (Pm) {\NaturalElem{61}{(145)}{Pm}{1.13}{Promethium}};
   \node[right of=Pm, LanthanideActinide] (Sm) {\NaturalElem{62}{150.36}{Sm}{1.17}{Samarium}};
@@ -293,7 +295,7 @@
 		%(AcLr.south west) -- (Ac.south west);
 %%TITLE%%-------------------------------------------------------------------------------
 	% Diagram Title (Change to (0,0) for Poster)
-	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,7)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements v4.1};
+	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,7)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements v4.2};
 	\draw[line width = 2.5pt] (B.south west)--(C.south west)--(Si.south west)--(P.south west)--(As.south west)--(Se.south west)--(Te.south west)-- (I.south west)--(At.south west);
 	\draw[line width = 2.5pt] (Al.north west)--(Al.north east)--(Ga.north east)--(Ge.north east)--(Sn.north east)--(Sb.north east)--(Bi.north east)--(Po.north east)--(Po.north east)--(Po.south east);
 
@@ -385,7 +387,8 @@
 	
 	\node (Gasses)
 	[align=center, text width = 165pt, text height = 11.5pt, anchor = south west, label={[font=\sffamily\bfseries,anchor=north]north: Gasses/Solutions}] at ($(Constants.south east)+(0.5,0)$) {
-		\\[2ex]
+		\vspace{-4pt}
+
 		$PV=nRT$\\
 		$P_A=P_{\text{total}}X_A$, where $X_A=\frac{\text{moles }A}{\text{total moles}}$\\
 		$P_{\text{total}}=P_A+P_B+P_C+\cdots$\\
@@ -393,11 +396,12 @@
 		$1\text{ atm}=760\text{ mmHg}=760\text{ torr}$\\
 		STP = $273.15\text{ K}$ and $1.0$ atm\\
 		At STP, ideal gas $22.4\text{L mol}^{-1}$.\\
-		Standard conditions $25^{\circ}$ C, $1$ atm.
+		Standard conditions $25^{\circ}$ C, $1$ atm.\\
+		$v_{rms}=\sqrt{\frac{3RT}{\mathcal{M}}}$
 	};
 	\node (Equilibrium)
 	[align = center, text width = 165pt, text height = 11.5pt, anchor = south east, label={[font=\sffamily\bfseries,anchor=north]north: Equilibrium}] at ($(Gasses.north east)+(0,0.5)$) {
-		\\[2ex]
+		\\[1ex]
 		When $a\text{A}+b\text{B}\rightleftharpoons c\text{C}+d\text{D}$,\\
 		$K_c=\frac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b}$ \\
 		$K_p=\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$\\
@@ -436,6 +440,18 @@
 		$R_{H_{\text{Rydberg}}}=1.097\times 10^7\text{ m}^{-1}$\\
 		$\frac{1}{\lambda}=R_H\left(\frac{1}{n_i^2}-\frac{1}{n_f^2}\right)$\\
 		$\triangle E=(-2.18\times10^{-18}\text{ J})\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right)$
+	};
+	\node (Walent)
+	[align = center, text width = 160pt, text height = 4pt, anchor = north west, label={[font=\sffamily\bfseries,anchor=north]north: Walent (Wa)}] at ($(Quantum.north east)+(2,0)$) {
+			\[1\text{ Walent}=0.082\text{ L(mol K)}^{-1}\]
+			\begin{align*}
+				R&=1\text{ Walentmosphere (Wam)}\\
+				&=1 \textit{ Walentorr}
+			\end{align*}
+			$1\text{ m}^3=8.2\times10^{-5}\text{ Wamokel (Wal)}$
+
+			Ideal Gas at STP:\\
+			$1.837\text{ Wake (Wk)}$
 	};
 	\begin{scope}[on background layer]
 	\node [
