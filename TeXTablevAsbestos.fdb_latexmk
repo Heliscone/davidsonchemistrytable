@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1708014329.67544 "/Users/evanlim/periodic-table/TeXTablev4_4.tex" "TeXTablev4_4.pdf" "TeXTablev4_4" 1708014330.61826 0
-  "/Users/evanlim/periodic-table/TeXTablev4_4.tex" 1708014329.51924 27119 30a012333cc9b206a6feec23956ab1f3 ""
+["pdflatex"] 1708411223.13584 "/Users/evanlim/periodic-table/TeXTablevAsbestos.tex" "TeXTablevAsbestos.pdf" "TeXTablevAsbestos" 1708411224.41081 0
+  "/Users/evanlim/periodic-table/TeXTablevAsbestos.tex" 1708411222.95074 27125 696cc81bacaccc5579da181bd11ede9b ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -166,10 +166,10 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1706580925.42091 4993097 9a4fc1f062d9d0f055c7bc5a5f93f223 ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1706572710 8211146 b364096b1a730407c90bb83ae6ec4865 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "TeXTablev4_4.aux" 1708014330.55965 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "TeXTablev4_4.tex" 1708014329.51924 27119 30a012333cc9b206a6feec23956ab1f3 ""
+  "TeXTablevAsbestos.aux" 1708411224.3267 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "TeXTablevAsbestos.tex" 1708411222.95074 27125 696cc81bacaccc5579da181bd11ede9b ""
   (generated)
-  "TeXTablev4_4.aux"
-  "TeXTablev4_4.log"
-  "TeXTablev4_4.pdf"
+  "TeXTablevAsbestos.aux"
+  "TeXTablevAsbestos.log"
+  "TeXTablevAsbestos.pdf"
   (rewritten before read)

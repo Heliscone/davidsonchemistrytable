@@ -2,8 +2,8 @@ PWD /Users/evanlim/periodic-table
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/evanlim/periodic-table/TeXTablev4_4.tex
-OUTPUT TeXTablev4_4.log
+INPUT /Users/evanlim/periodic-table/TeXTablevAsbestos.tex
+OUTPUT TeXTablevAsbestos.log
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
@@ -205,10 +205,10 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libr
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
-INPUT ./TeXTablev4_4.aux
-INPUT ./TeXTablev4_4.aux
-INPUT TeXTablev4_4.aux
-OUTPUT TeXTablev4_4.aux
+INPUT ./TeXTablevAsbestos.aux
+INPUT ./TeXTablevAsbestos.aux
+INPUT TeXTablevAsbestos.aux
+OUTPUT TeXTablevAsbestos.aux
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -265,9 +265,9 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssi8.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssi8.tfm
-OUTPUT TeXTablev4_4.pdf
+OUTPUT TeXTablevAsbestos.pdf
 INPUT /usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT TeXTablev4_4.aux
+INPUT TeXTablevAsbestos.aux
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb

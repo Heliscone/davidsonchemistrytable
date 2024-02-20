@@ -300,7 +300,7 @@
 		%(AcLr.south west) -- (Ac.south west);
 %%TITLE%%-------------------------------------------------------------------------------
 	% Diagram Title (Change to (0,0) for Poster)
-	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,7)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements v4.4};
+	\node at ($0.5*(H.west) + 0.5*(He.east)+(0,7)$) (Titles) [scale=2, font={\sffamily\Huge\bfseries}] {Periodic Table of Elements vAsbestos};
 	\draw[line width = 2.5pt] (B.south west)--(C.south west)--(Si.south west)--(P.south west)--(As.south west)--(Se.south west)--(Te.south west)-- (I.south west)--(At.south west);
 	\draw[line width = 2.5pt] (Al.north west)--(Al.north east)--(Ga.north east)--(Ge.north east)--(Sn.north east)--(Sb.north east)--(Bi.north east)--(Po.north east)--(Po.north east)--(Po.south east);
 
@@ -426,10 +426,10 @@
 	\node (Kinetics)
 	[align=center, text width = 160pt, text height = 5pt, anchor = south west, label={[font=\sffamily\bfseries,anchor=north]north: Kinetics}] at ($(Gasses.south east)+(0.5,0)$) {
 		\\[2ex]
-		$[A]_t-[A]_0=-k$ (0\textsuperscript{th} order)\\
+		$[A]_t-[A]_0=-kt$ (0\textsuperscript{th} order)\\
 		$\ln[A]_t-\ln[A]_0=-kt$ (1\textsuperscript{st} order)\\
 		$\frac{1}{[A]_t}-\frac{1}{[A]_0}=kt$ (2\textsuperscript{nd} order)\\
-		$t_{1/2}=\frac{0.693}{t}$ (1\textsuperscript{st} order)
+		$t_{1/2}=\frac{0.693}{k}$ (1\textsuperscript{st} order)
 	};
 	\node (Bzzt)
 	[align = center, text width = 160pt, text height = 5pt, anchor = south west, label={[font=\sffamily\bfseries,anchor=north]north: Thermo/Electrochem}] at ($(Kinetics.north west)+(0,0.5)$) {
